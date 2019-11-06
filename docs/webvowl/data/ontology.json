@@ -2,6 +2,7 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "da", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/vocommons/voaf", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/fso", "http://xmlns.com/foaf/0.1" ],
     "title" : {
       "en" : "The Fluid Systems Ontology (FSO)"
     },
@@ -12,16 +13,16 @@
       "en" : "Some description in english"
     },
     "other" : {
-      "priorVersion" : [ {
-        "identifier" : "priorVersion",
-        "language" : "undefined",
-        "value" : "https://w3id.org/fso/0.0.1",
-        "type" : "iri"
-      } ],
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
         "value" : "https://creativecommons.org/licenses/by/1.0/",
+        "type" : "iri"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fso/0.0.1",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -37,12 +38,12 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Ali Kücükavci",
+        "value" : "Ville Kukkonen",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Ville Kukkonen",
+        "value" : "Ali Kücükavci",
         "type" : "label"
       } ],
       "contributor" : [ {
@@ -63,17 +64,17 @@
         "value" : "2019-11-06T12:00:00",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/fso#",
-        "type" : "iri"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "0.0.1",
         "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fso#",
+        "type" : "iri"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -91,34 +92,28 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "3",
-    "type" : "owl:Class"
-  }, {
-    "id" : "5",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
     "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "2",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "8",
-    "type" : "owl:Thing"
+    "type" : "rdfs:Literal"
   }, {
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "5",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
     "type" : "owl:Class"
   }, {
     "id" : "10",
-    "type" : "owl:Class"
-  }, {
-    "id" : "4",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -134,8 +129,15 @@
       "en" : "A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties.",
       "da" : "Et system definerer egenskaber der er gældende for alle komponenter i systemet og fungerer dermed som en grupperingsmekanisme. Typiske systemegenskaber omfatter fluidegenskaber som fluidtype, temperatur og termiske egenskaber."
     },
-    "id" : "1",
-    "superClasses" : [ "3" ]
+    "id" : "4",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "https://w3id.org/fso#Element",
     "baseIri" : "https://w3id.org/fso",
@@ -143,58 +145,22 @@
     "label" : {
       "IRI-based" : "Element"
     },
-    "subClasses" : [ "1", "4" ],
-    "id" : "3"
-  }, {
-    "iri" : "https://w3id.org/fso#suppliesFluidTo",
-    "baseIri" : "https://w3id.org/fso",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "suppliesFluidTo",
-      "en" : "supplies fluid to",
-      "da" : "forsyner fluid til"
-    },
-    "comment" : { },
-    "id" : "5",
-    "superClasses" : [ "6" ]
-  }, {
-    "iri" : "https://w3id.org/fso#returnsFluidTo",
-    "baseIri" : "https://w3id.org/fso",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "returnsFluidTo",
-      "en" : "returns fluid to",
-      "da" : "returnerer fluid til"
-    },
-    "comment" : { },
-    "id" : "7",
-    "superClasses" : [ "6" ]
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "2",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "8",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "https://w3id.org/fso#feeds",
-    "baseIri" : "https://w3id.org/fso",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "feeds",
-      "en" : "feeds",
-      "da" : "føder"
-    },
-    "subClasses" : [ "5", "7" ],
-    "comment" : { },
+    "subClasses" : [ "4", "10" ],
     "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "5",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
   }, {
     "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
     "baseIri" : "http://purl.org/vocommons/voaf",
@@ -207,7 +173,8 @@
       "baseIri" : "https://w3id.org/fso",
       "labels" : { }
     } ],
-    "id" : "9"
+    "attributes" : [ "external" ],
+    "id" : "13"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -215,14 +182,8 @@
     "label" : {
       "IRI-based" : "Person"
     },
-    "individuals" : [ {
-      "iri" : "https://orcid.org/0000-0002-6519-7057",
-      "baseIri" : "https://orcid.org",
-      "labels" : {
-        "IRI-based" : "0000-0002-6519-7057"
-      }
-    } ],
-    "id" : "10"
+    "attributes" : [ "external" ],
+    "id" : "14"
   }, {
     "iri" : "https://w3id.org/fso#HeatExchanger",
     "baseIri" : "https://w3id.org/fso",
@@ -236,17 +197,52 @@
       "en" : "A heat exchanger is a device designed to transfer energy from one medium to another. Examples of heat exchangers include radiators, heating coils, water/water heat exchangers and mixing plants.",
       "da" : "En varmeveksler er en komponent designet til at overføre energi fra et medie til et andet. Eksempler på varmevekslere omfatter radiatorer, varmeflader, vand/vand varmevekslere og blandeanlæg."
     },
-    "id" : "4",
-    "superClasses" : [ "3" ]
+    "id" : "10",
+    "superClasses" : [ "6" ]
   } ],
   "property" : [ {
     "id" : "0",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/fso#fedBy",
+    "inverse" : "2",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "fedBy",
+      "en" : "fed by",
+      "da" : "fødes af"
+    },
+    "domain" : "1",
+    "comment" : { },
+    "attributes" : [ "object", "transitive" ],
+    "id" : "0"
+  }, {
     "iri" : "https://w3id.org/fso#hasComponent",
     "baseIri" : "https://w3id.org/fso",
-    "range" : "2",
+    "range" : "5",
     "annotations" : {
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
@@ -260,9 +256,68 @@
       "en" : "has component",
       "da" : "har komponent"
     },
+    "domain" : "4",
+    "comment" : { },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "range" : "6",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "range" : "6",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/fso#suppliesFluidTo",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "suppliesFluidTo",
+      "en" : "supplies fluid to",
+      "da" : "forsyner fluid til"
+    },
     "domain" : "1",
     "comment" : { },
     "attributes" : [ "object" ],
-    "id" : "0"
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/fso#returnsFluidTo",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "returnsFluidTo",
+      "en" : "returns fluid to",
+      "da" : "returnerer fluid til"
+    },
+    "domain" : "1",
+    "comment" : { },
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/fso#feeds",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "feeds",
+      "en" : "feeds",
+      "da" : "føder"
+    },
+    "domain" : "1",
+    "comment" : { },
+    "attributes" : [ "object", "transitive" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "name"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "15"
   } ]
 }

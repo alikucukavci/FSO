@@ -51,7 +51,7 @@ function loadTOC(){
 <body>
 <div class="container">
 <div class="head">
-<div style="float:right">language <a href="index-fi.html"><b>fi</b></a> <a href="index-dk.html"><b>dk</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
 <h1>The Fluid Systems Ontology (FSO)</h1>
 <h2>Release  2019-11-06T12:00:00</h2>
 
@@ -75,7 +75,7 @@ function loadTOC(){
 <dd>Ali Kücükavci,Mads Holten Rasmussen,Ville Kukkonen. The Fluid Systems Ontology (FSO). Revision: 0.0.1. Retrieved from: https://w3id.org/fso/0.0.1</dd>
 </dl>
 
-<hr/>
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
 </div>
 <div class="status">
 <div>
@@ -105,10 +105,10 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>voaf</b></td><td>&lt;http://purl.org/vocommons/voaf&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
 <tr><td><b>orcid-org</b></td><td>&lt;https://orcid.org&gt;</td></tr>
+<tr><td><b>0-1</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
 <tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
-<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
 <tr><td><b>default namespace</b></td><td>&lt;https://w3id.org/fso&gt;</td></tr>
 </tbody>
 </table>
@@ -151,12 +151,70 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#hasComponent" title="https://w3id.org/fso#hasComponent">has component</a>
    </li>
-</ul><h4>Named Individuals</h4><ul class="hlist">
+</ul><h4>Annotation Properties</h4><ul class="hlist">
    <li>
-      <a href="#https://orcid.org/0000-0002-6519-7057" title="https://orcid.org/0000-0002-6519-7057">
-         <span>0000 0002 6519 7057</span>
+      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+         <span>contributor</span>
       </a>
    </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/domainIncludes" title="http://schema.org/domainIncludes">
+         <span>domain includes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred namespace prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred namespace uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://schema.org/rangeIncludes" title="http://schema.org/rangeIncludes">
+         <span>range includes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+         title="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+         <span>term status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
       <a href="#" title="https://w3id.org/fso#">
          <span></span>
@@ -360,41 +418,177 @@ This section provides details for each class and property defined by The Fluid S
          </dl>
       </div>
    </div>
+</div><div id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+            <span>contributor</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+            <span>creator</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/domainIncludes" title="http://schema.org/domainIncludes">
+            <span>domain includes</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+            <span>issued</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+            <span>license</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+            <span>modified</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+            title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+            <span>preferred namespace prefix</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+            <span>preferred namespace uri</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/rangeIncludes" title="http://schema.org/rangeIncludes">
+            <span>range includes</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+            title="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+            <span>term status</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+            <span>title</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/dc/terms/contributor">
+      <h3>contributor<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/creator">
+      <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/description">
+      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+   </div>
+   <div class="entity" id="http://schema.org/domainIncludes">
+      <h3>domain includes<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/domainIncludes</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/issued">
+      <h3>issued<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/license">
+      <h3>license<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/modified">
+      <h3>modified<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+      <h3>preferred namespace prefix<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+      <h3>preferred namespace uri<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+   </div>
+   <div class="entity" id="http://schema.org/rangeIncludes">
+      <h3>range includes<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/rangeIncludes</p>
+   </div>
+   <div class="entity" id="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+      <h3>term status<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2003/06/sw-vocab-status/ns#term_status</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/title">
+      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+   </div>
 </div><div id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
-      <li>
-         <a href="#https://orcid.org/0000-0002-6519-7057" title="https://orcid.org/0000-0002-6519-7057">
-            <span>0000 0002 6519 7057</span>
-         </a>
-      </li>
       <li>
          <a href="#" title="https://w3id.org/fso#">
             <span></span>
          </a>
       </li>
    </ul>
-   <div class="entity" id="https://orcid.org/0000-0002-6519-7057">
-      <h3>0000 0002 6519 7057<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://orcid.org/0000-0002-6519-7057</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has facts</dt>
-         <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/name">name</span>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="literal">"Mads Holten Rasmussen"</span>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="">
       <h3>:<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>

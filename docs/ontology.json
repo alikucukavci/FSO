@@ -44,12 +44,6 @@
   "@id" : "http://xmlns.com/foaf/0.1/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://orcid.org/0000-0002-6519-7057",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
-  "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Mads Holten Rasmussen"
-  } ]
-}, {
   "@id" : "https://w3id.org/fso#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/vocommons/voaf#Vocabulary" ],
   "http://purl.org/dc/terms/contributor" : [ {

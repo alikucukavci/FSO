@@ -172,12 +172,6 @@
 #    Individuals
 #################################################################
 
-###  https://orcid.org/0000-0002-6519-7057
-<https://orcid.org/0000-0002-6519-7057> rdf:type owl:NamedIndividual ,
-                                                 <http://xmlns.com/foaf/0.1/Person> ;
-                                        <http://xmlns.com/foaf/0.1/name> "Mads Holten Rasmussen" .
-
-
 ###  https://w3id.org/fso#
 <https://w3id.org/fso#> rdf:type owl:NamedIndividual ,
                                  <http://purl.org/vocommons/voaf#Vocabulary> .

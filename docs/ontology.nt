@@ -162,11 +162,6 @@
 # #################################################################
 # 
 # 
-# https://orcid.org/0000-0002-6519-7057
-<https://orcid.org/0000-0002-6519-7057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://orcid.org/0000-0002-6519-7057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://orcid.org/0000-0002-6519-7057> <http://xmlns.com/foaf/0.1/name> "Mads Holten Rasmussen" .
-# 
 # https://w3id.org/fso#
 <https://w3id.org/fso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/fso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
