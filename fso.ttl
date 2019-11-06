@@ -57,9 +57,6 @@ foaf:name a owl:DatatypeProperty .
     vann:preferredNamespacePrefix    "fso" ;
     vann:preferredNamespaceUri <https://w3id.org/fso#> .
     
-<https://orcid.org/0000-0002-6519-7057> a foaf:Person ; 
-  foaf:name    "Mads Holten Rasmussen" .
-
 
 ## CLASSES
 
