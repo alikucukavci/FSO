@@ -1,4 +1,4 @@
-# Copyright 2019 Ali Kücükavci & Mads Holten Rasmussen.
+# Copyright 2019 Ali Kücükavci, Ville Kukkonen & Mads Holten Rasmussen.
 # 
 # This work is licensed under a Creative Commons Attribution License. 
 # This copyright applies to the FSO Vocabulary Specification and
@@ -39,18 +39,19 @@ foaf:Person a owl:Class .
 foaf:name a owl:DatatypeProperty .
 
 
-<https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
+<https://w3id.org/fso#> rdf:type owl:Ontology , voaf:Vocabulary ;
     dcterms:modified    "2019-11-06T12:00:00"^^xsd:dateTime ;
     dcterms:issued    "2020-01-01T12:00:00"^^xsd:dateTime ;
     owl:versionInfo    "0.0.1" ;
     owl:versionIRI <https://w3id.org/fso/0.0.1> ;
-    owl:priorVersion <https://w3id.org/bot/0.0.1> ;
+    owl:priorVersion <https://w3id.org/fso/0.0.1> ;
     #rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> ;
     dcterms:title    "The Fluid Systems Ontology (FSO)"@en ;
     dcterms:description    """Some description in english"""@en ;
     dcterms:creator <https://orcid.org/0000-0002-6519-7057> ;
     dcterms:creator "Ali Kücükavci" ;
 	dcterms:creator "Ville Kukkonen" ;
+   	dcterms:creator "Mads Holten Rasmussen" ;
     dcterms:contributor "All contributing members of the W3C Linked Building Data Community Group" ;
     dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
     vann:preferredNamespacePrefix    "fso" ;
@@ -68,7 +69,7 @@ fso:HeatExchanger
                         "Varmeveksler"@da ;
     rdfs:comment        "A heat exchanger is a device designed to transfer energy from one medium to another. Examples of heat exchangers include radiators, heating coils, water/water heat exchangers and mixing plants."@en ,
                         "En varmeveksler er en komponent designet til at overføre energi fra et medie til et andet. Eksempler på varmevekslere omfatter radiatorer, varmeflader, vand/vand varmevekslere og blandeanlæg."@da ;
-    rdfs:subClassOf     bot:Element .
+    rdfs:subClassOf     fso:Element .
 
 fso:System 
     a                   owl:Class ;
@@ -76,7 +77,7 @@ fso:System
                         "System"@da ;
     rdfs:comment        "A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties."@en ,
                         "Et system definerer egenskaber der er gældende for alle komponenter i systemet og fungerer dermed som en grupperingsmekanisme. Typiske systemegenskaber omfatter fluidegenskaber som fluidtype, temperatur og termiske egenskaber."@da ;
-    rdfs:subClassOf     bot:Element .
+    rdfs:subClassOf     fso:Element .
 
 # OBJECT PROPERTIES
 
