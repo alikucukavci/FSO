@@ -20,7 +20,7 @@
 @prefix schema:   <http://schema.org/>.
 @prefix bot: <https://w3id.org/bot#> .
 
-@prefix fso: <https://w3id.org/fso#> .
+@prefix fso: <https://w3id.org/fsi#> .
 
 voaf:Vocabulary a owl:Class .
 dcterms:title a owl:AnnotationProperty .
