@@ -1,0 +1,122 @@
+# Copyright 2019 Ali Kücükavci & Mads Holten Rasmussen.
+# 
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the FSO Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# FSO uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix voaf:     <http://purl.org/vocommons/voaf#> .
+@prefix vs:       <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix dce:      <http://purl.org/dc/elements/1.1/> .
+@prefix dbo:      <http://dbpedia.org/ontology/> .
+@prefix schema:   <http://schema.org/>.
+@prefix bot: <https://w3id.org/bot#> .
+
+@prefix fso: <https://w3id.org/fso#> .
+
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+schema:domainIncludes a owl:AnnotationProperty .
+schema:rangeIncludes a owl:AnnotationProperty .
+vs:term_status a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+
+<https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
+    dcterms:modified    "2019-11-06T12:00:00"^^xsd:dateTime ;
+    dcterms:issued    "2020-01-01T12:00:00"^^xsd:dateTime ;
+    owl:versionInfo    "0.0.1" ;
+    owl:versionIRI <https://w3id.org/fso/0.0.1> ;
+    owl:priorVersion <https://w3id.org/bot/0.0.1> ;
+    #rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> ;
+    dcterms:title    "The Fluid Systems Ontology (FSO)"@en ;
+    dcterms:description    """Some description in english"""@en ;
+    dcterms:creator <https://orcid.org/0000-0002-6519-7057> ;
+    dcterms:creator "Ali Kücükavci" ;
+	dcterms:creator "Ville Kukkonen" ;
+    dcterms:contributor "All contributing members of the W3C Linked Building Data Community Group" ;
+    dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
+    vann:preferredNamespacePrefix    "fso" ;
+    vann:preferredNamespaceUri <https://w3id.org/fso#> .
+    
+<https://orcid.org/0000-0002-6519-7057> a foaf:Person ; 
+  foaf:name    "Mads Holten Rasmussen" .
+
+
+## CLASSES
+
+fso:HeatExchanger 
+    a                   owl:Class ;
+    rdfs:label          "Heat Exchanger"@en ,
+                        "Varmeveksler"@da ;
+    rdfs:comment        "A heat exchanger is a device designed to transfer energy from one medium to another. Examples of heat exchangers include radiators, heating coils, water/water heat exchangers and mixing plants."@en ,
+                        "En varmeveksler er en komponent designet til at overføre energi fra et medie til et andet. Eksempler på varmevekslere omfatter radiatorer, varmeflader, vand/vand varmevekslere og blandeanlæg."@da ;
+    rdfs:subClassOf     bot:Element .
+
+fso:System 
+    a                   owl:Class ;
+    rdfs:label          "System"@en ,
+                        "System"@da ;
+    rdfs:comment        "A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties."@en ,
+                        "Et system definerer egenskaber der er gældende for alle komponenter i systemet og fungerer dermed som en grupperingsmekanisme. Typiske systemegenskaber omfatter fluidegenskaber som fluidtype, temperatur og termiske egenskaber."@da ;
+    rdfs:subClassOf     bot:Element .
+
+# OBJECT PROPERTIES
+
+fso:feeds
+    a                   owl:ObjectProperty , owl:TransitiveProperty ;
+    owl:inverseOf       fso:fedBy ;
+    rdfs:label          "feeds"@en ,
+                        "føder"@da ;
+    rdfs:comment        ""@en ,
+                        ""@da .
+
+fso:fedBy
+    a                   owl:ObjectProperty , owl:TransitiveProperty ;
+    owl:inverseOf       fso:feeds ;
+    rdfs:label          "fed by"@en ,
+                        "fødes af"@da ;
+    rdfs:comment        ""@en ,
+                        ""@da .
+
+fso:suppliesFluidTo
+    a                   owl:ObjectProperty ;
+    rdfs:subClassOf     fso:feeds ;
+    rdfs:label          "supplies fluid to"@en ,
+                        "forsyner fluid til"@da ;
+    rdfs:comment        ""@en ,
+                        ""@da .
+
+fso:returnsFluidTo
+    a                   owl:ObjectProperty ;
+    rdfs:subClassOf     fso:feeds ;
+    rdfs:label          "returns fluid to"@en ,
+                        "returnerer fluid til"@da ;
+    rdfs:comment        ""@en ,
+                        ""@da .
+
+fso:hasComponent
+    a                   owl:ObjectProperty ;
+    rdfs:domain         fso:System ;
+    schema:domainIncludes   fso:HeatExchanger ;
+    rdfs:label          "has component"@en ,
+                        "har komponent"@da ;
+    rdfs:comment        ""@en ,
+                        ""@da .
