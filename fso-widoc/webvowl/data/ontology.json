@@ -1,0 +1,268 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "da", "undefined" ],
+    "title" : {
+      "en" : "The Fluid Systems Ontology (FSO)"
+    },
+    "iri" : "https://w3id.org/fso#",
+    "version" : "0.0.1",
+    "author" : [ "Mads Holten Rasmussen", "https://orcid.org/0000-0002-6519-7057", "Ville Kukkonen", "Ali Kücükavci" ],
+    "description" : {
+      "en" : "Some description in english"
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fso/0.0.1",
+        "type" : "iri"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/1.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Mads Holten Rasmussen",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-6519-7057",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Ali Kücükavci",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Ville Kukkonen",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "All contributing members of the W3C Linked Building Data Community Group",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "fso",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2019-11-06T12:00:00",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fso#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Fluid Systems Ontology (FSO)",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2020-01-01T12:00:00",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "8",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/fso#System",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "System",
+      "en" : "System",
+      "da" : "System"
+    },
+    "comment" : {
+      "en" : "A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties.",
+      "da" : "Et system definerer egenskaber der er gældende for alle komponenter i systemet og fungerer dermed som en grupperingsmekanisme. Typiske systemegenskaber omfatter fluidegenskaber som fluidtype, temperatur og termiske egenskaber."
+    },
+    "id" : "1",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/fso#Element",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Element"
+    },
+    "subClasses" : [ "1", "4" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/fso#suppliesFluidTo",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "suppliesFluidTo",
+      "en" : "supplies fluid to",
+      "da" : "forsyner fluid til"
+    },
+    "comment" : { },
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://w3id.org/fso#returnsFluidTo",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "returnsFluidTo",
+      "en" : "returns fluid to",
+      "da" : "returnerer fluid til"
+    },
+    "comment" : { },
+    "id" : "7",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "2",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "8",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/fso#feeds",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "feeds",
+      "en" : "feeds",
+      "da" : "føder"
+    },
+    "subClasses" : [ "5", "7" ],
+    "comment" : { },
+    "id" : "6"
+  }, {
+    "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
+    "baseIri" : "http://purl.org/vocommons/voaf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vocabulary"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/fso#",
+      "baseIri" : "https://w3id.org/fso",
+      "labels" : { }
+    } ],
+    "id" : "9"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "individuals" : [ {
+      "iri" : "https://orcid.org/0000-0002-6519-7057",
+      "baseIri" : "https://orcid.org",
+      "labels" : {
+        "IRI-based" : "0000-0002-6519-7057"
+      }
+    } ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/fso#HeatExchanger",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatExchanger",
+      "en" : "Heat Exchanger",
+      "da" : "Varmeveksler"
+    },
+    "comment" : {
+      "en" : "A heat exchanger is a device designed to transfer energy from one medium to another. Examples of heat exchangers include radiators, heating coils, water/water heat exchangers and mixing plants.",
+      "da" : "En varmeveksler er en komponent designet til at overføre energi fra et medie til et andet. Eksempler på varmevekslere omfatter radiatorer, varmeflader, vand/vand varmevekslere og blandeanlæg."
+    },
+    "id" : "4",
+    "superClasses" : [ "3" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/fso#hasComponent",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "2",
+    "annotations" : {
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fso#HeatExchanger",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasComponent",
+      "en" : "has component",
+      "da" : "har komponent"
+    },
+    "domain" : "1",
+    "comment" : { },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  } ]
+}

@@ -1,0 +1,198 @@
+<https://w3id.org/fso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/fso#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/fso/0.0.1> .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/contributor> "All contributing members of the W3C Linked Building Data Community Group" .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-6519-7057> .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/creator> "Ali Kücükavci" .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/creator> "Ville Kukkonen" .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/description> "Some description in english"@en .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/issued> "2020-01-01T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/modified> "2019-11-06T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/fso#> <http://purl.org/dc/terms/title> "The Fluid Systems Ontology (FSO)"@en .
+<https://w3id.org/fso#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fso" .
+<https://w3id.org/fso#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/fso#> .
+<https://w3id.org/fso#> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/fso/0.0.1> .
+<https://w3id.org/fso#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/fso#fedBy
+<https://w3id.org/fso#fedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#fedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/fso#feeds> .
+<https://w3id.org/fso#fedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/fso#fedBy> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
+<https://w3id.org/fso#fedBy> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/fso#fedBy> <http://www.w3.org/2000/01/rdf-schema#label> "fed by"@en .
+<https://w3id.org/fso#fedBy> <http://www.w3.org/2000/01/rdf-schema#label> "fødes af"@da .
+# 
+# https://w3id.org/fso#feeds
+<https://w3id.org/fso#feeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#feeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+# 
+# https://w3id.org/fso#hasComponent
+<https://w3id.org/fso#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fso#System> .
+<https://w3id.org/fso#hasComponent> <http://schema.org/domainIncludes> <https://w3id.org/fso#HeatExchanger> .
+<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
+<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "har komponent"@da .
+<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component"@en .
+# 
+# https://w3id.org/fso#returnsFluidTo
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/fso#suppliesFluidTo
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/fso#Element
+<https://w3id.org/fso#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/fso#HeatExchanger
+<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Element> .
+<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#comment> "A heat exchanger is a device designed to transfer energy from one medium to another. Examples of heat exchangers include radiators, heating coils, water/water heat exchangers and mixing plants."@en .
+<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#comment> "En varmeveksler er en komponent designet til at overføre energi fra et medie til et andet. Eksempler på varmevekslere omfatter radiatorer, varmeflader, vand/vand varmevekslere og blandeanlæg."@da .
+<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Heat Exchanger"@en .
+<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Varmeveksler"@da .
+# 
+# https://w3id.org/fso#System
+<https://w3id.org/fso#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Element> .
+<https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#comment> "A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties."@en .
+<https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#comment> "Et system definerer egenskaber der er gældende for alle komponenter i systemet og fungerer dermed som en grupperingsmekanisme. Typiske systemegenskaber omfatter fluidegenskaber som fluidtype, temperatur og termiske egenskaber."@da .
+<https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@da .
+<https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
+# 
+# https://w3id.org/fso#feeds
+<https://w3id.org/fso#feeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/fso#returnsFluidTo
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#feeds> .
+# 
+# https://w3id.org/fso#suppliesFluidTo
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#feeds> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://orcid.org/0000-0002-6519-7057
+<https://orcid.org/0000-0002-6519-7057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0000-0002-6519-7057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0002-6519-7057> <http://xmlns.com/foaf/0.1/name> "Mads Holten Rasmussen" .
+# 
+# https://w3id.org/fso#
+<https://w3id.org/fso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/fso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/fso#feeds> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
+<https://w3id.org/fso#feeds> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/fso#feeds> <http://www.w3.org/2000/01/rdf-schema#label> "feeds"@en .
+<https://w3id.org/fso#feeds> <http://www.w3.org/2000/01/rdf-schema#label> "føder"@da .
+# 
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "returnerer fluid til"@da .
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "returns fluid to"@en .
+# 
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "forsyner fluid til"@da .
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "supplies fluid to"@en .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
