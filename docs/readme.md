@@ -37,7 +37,6 @@ Implementing changes to the ontology
 ==========
 If you do any changes to fso.ttl and want to display it on https://alikucukavci.github.io/FSO/index-en.html, then following steps has to be executed. 
 1. Do your changes in fso.ttl
-2. Do git add, commit and push to origin master
 2. Open WIDOC.jar desktop app, which you have downloaded
 3. In WIDOC, Select template, change project name to "docs"
 4. In WIDOC, Select template, change create template documentation from URI to "https://raw.githubusercontent.com/alikucukavci/FSO/master/fso.ttl"
