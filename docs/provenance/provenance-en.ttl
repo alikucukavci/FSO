@@ -3,6 +3,8 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 <https://w3id.org/fso/0.0.1> a prov:Entity;
 	 dc:title "The Fluid Systems Ontology (FSO)";
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-6519-7057>;
+	 dc:creator <https://orcid.org/0000-0002-6519-7057>;
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;

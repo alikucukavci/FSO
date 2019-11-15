@@ -1,15 +1,13 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/fso#"
      xml:base="https://w3id.org/fso"
-     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/fso#">
         <owl:versionIRI rdf:resource="https://w3id.org/fso/0.0.1"/>
         <terms:contributor>All contributing members of the W3C Linked Building Data Community Group</terms:contributor>
@@ -105,27 +103,6 @@
     
 
 
-    <!-- http://schema.org/domainIncludes -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
-    
-
-
-    <!-- http://schema.org/rangeIncludes -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
-    
-
-
-    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -138,16 +115,26 @@
     
 
 
-    <!-- https://w3id.org/fso#fedBy -->
+    <!-- https://w3id.org/fso#exchangesFluidWith -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/fso#fedBy">
-        <owl:inverseOf rdf:resource="https://w3id.org/fso#feeds"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="da"></rdfs:comment>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:label xml:lang="en">fed by</rdfs:label>
-        <rdfs:label xml:lang="da">fødes af</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#exchangesFluidWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relation between two things which have a fluid exchange connection</rdfs:comment>
+        <rdfs:label xml:lang="en">exchanges fluid with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#exchangesHeatWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#exchangesHeatWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relation between two things which have a heat exchange connection</rdfs:comment>
+        <rdfs:label xml:lang="en">exchanges heat with</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -156,7 +143,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/fso#feeds">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#exchangesFluidWith"/>
     </owl:ObjectProperty>
     
 
@@ -165,12 +152,166 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasComponent">
-        <rdfs:domain rdf:resource="https://w3id.org/fso#System"/>
-        <schema:domainIncludes rdf:resource="https://w3id.org/fso#HeatExchanger"/>
-        <rdfs:comment xml:lang="da"></rdfs:comment>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:label xml:lang="da">har komponent</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">Relates a system to a component it contains</rdfs:comment>
         <rdfs:label xml:lang="en">has component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasDensity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasDensity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#hasProperty"/>
+        <rdfs:comment xml:lang="en">A relation between a system and a its density</rdfs:comment>
+        <rdfs:label xml:lang="en">has density</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasFluid -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasFluid">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Relates a system to the fluid it contains</rdfs:comment>
+        <rdfs:label xml:lang="en">has fluid</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasHeatCapacity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasHeatCapacity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#hasProperty"/>
+        <rdfs:comment xml:lang="en">A relation between a thing and its heat capacity</rdfs:comment>
+        <rdfs:label xml:lang="en">has heat capacity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasMassFlow -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasMassFlow">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#hasProperty"/>
+        <rdfs:comment xml:lang="en">Relation between a thing and its mass flow rate</rdfs:comment>
+        <rdfs:label xml:lang="en">has mass flow</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasPowerOutput -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasPowerOutput">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#hasProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Relation between a thing and a property intrinsic to it</rdfs:comment>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasReturnSystem -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasReturnSystem">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#hasSubSystem"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/fso#ReturnSystem"/>
+        <rdfs:comment xml:lang="en">Relation between a system and its return system</rdfs:comment>
+        <rdfs:label xml:lang="en">has return system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasReturnTemperature -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasReturnTemperature">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#hasTemperature"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/fso#hasReturnSystem"/>
+            <rdf:Description rdf:about="https://w3id.org/fso#hasTemperature"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Relation between a system and its return temperature</rdfs:comment>
+        <rdfs:label xml:lang="en">has return temperature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasSubSystem -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasSubSystem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/fso#System"/>
+        <rdfs:comment xml:lang="en">Relation between a system and its subsystem</rdfs:comment>
+        <rdfs:label xml:lang="en">has subsystem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasSupplySystem -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasSupplySystem">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#hasSubSystem"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/fso#SupplySystem"/>
+        <rdfs:comment xml:lang="en">Relation between a system and its supply system</rdfs:comment>
+        <rdfs:label xml:lang="en">has supply system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasSupplyTemperature -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasSupplyTemperature">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#hasTemperature"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/fso#hasSupplySystem"/>
+            <rdf:Description rdf:about="https://w3id.org/fso#hasTemperature"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Relation between a system and its supply temperature</rdfs:comment>
+        <rdfs:label xml:lang="en">has supply temperature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#hasTemperature -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#hasTemperature">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#hasProperty"/>
+        <rdfs:comment xml:lang="en">Relation between a thing and its temperature</rdfs:comment>
+        <rdfs:label xml:lang="en">has temperature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fso#isMadeOfMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#isMadeOfMaterial">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Relation between a thing and the material it is made of</rdfs:comment>
+        <rdfs:label xml:lang="en">is made of material</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -178,33 +319,22 @@
     <!-- https://w3id.org/fso#returnsFluidTo -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/fso#returnsFluidTo"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#returnsFluidTo">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#feeds"/>
+        <rdfs:comment xml:lang="en">Relation of a component that supplies fluid to another component</rdfs:comment>
+        <rdfs:label xml:lang="en">returns fluid to</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/fso#suppliesFluidTo -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/fso#suppliesFluidTo"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/name -->
-
-
-    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/fso#suppliesFluidTo">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fso#feeds"/>
+        <rdfs:comment xml:lang="en">Relation of a component that returns fluid to another component</rdfs:comment>
+        <rdfs:label xml:lang="en">supplies fluid to</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -227,29 +357,142 @@
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Person -->
+    <!-- https://w3id.org/fso#Component -->
 
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    <owl:Class rdf:about="https://w3id.org/fso#Component">
+        <rdfs:comment xml:lang="en">A component contained by a fso:System</rdfs:comment>
+        <rdfs:label xml:lang="en">Component</rdfs:label>
+    </owl:Class>
     
 
 
-    <!-- https://w3id.org/fso#Element -->
+    <!-- https://w3id.org/fso#DistributionSystem -->
 
 
-    <owl:Class rdf:about="https://w3id.org/fso#Element"/>
+    <owl:Class rdf:about="https://w3id.org/fso#DistributionSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#System"/>
+        <rdfs:comment xml:lang="en">A system that distributes energy and/or mass</rdfs:comment>
+        <rdfs:label xml:lang="en">Distribution system</rdfs:label>
+    </owl:Class>
     
 
 
-    <!-- https://w3id.org/fso#HeatExchanger -->
+    <!-- https://w3id.org/fso#EnergyConversionDevice -->
 
 
-    <owl:Class rdf:about="https://w3id.org/fso#HeatExchanger">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Element"/>
-        <rdfs:comment xml:lang="en">A heat exchanger is a device designed to transfer energy from one medium to another. Examples of heat exchangers include radiators, heating coils, water/water heat exchangers and mixing plants.</rdfs:comment>
-        <rdfs:comment xml:lang="da">En varmeveksler er en komponent designet til at overføre energi fra et medie til et andet. Eksempler på varmevekslere omfatter radiatorer, varmeflader, vand/vand varmevekslere og blandeanlæg.</rdfs:comment>
-        <rdfs:label xml:lang="en">Heat Exchanger</rdfs:label>
-        <rdfs:label xml:lang="da">Varmeveksler</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/fso#EnergyConversionDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">A device that is used to convert energy from one form to another, or move it from one system to another. Potential examples include motors and heat exhangers.</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy conversion device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#Fitting -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#Fitting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">A component used to connect segments to each other, or to other components. For example, a junction in a pipe system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fitting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#FlowController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#FlowController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">A device that has the potential to control the flow in a network. For example, valves and dampers.</rdfs:comment>
+        <rdfs:label xml:lang="en">Flow controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#FlowMovingDevice -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#FlowMovingDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">A device used to induce movement in a network. For example, pumps and fans.</rdfs:comment>
+        <rdfs:label xml:lang="en">Flow moving device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#Fluid -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#Fluid">
+        <rdfs:comment xml:lang="en">A liquid or gaseous substance, for example water or some mixture</rdfs:comment>
+        <rdfs:label xml:lang="en">Fluid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#Material -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#Material">
+        <rdfs:comment xml:lang="en">A substance</rdfs:comment>
+        <rdfs:label xml:lang="en">Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#MonitoringDevice -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#MonitoringDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">A device used to monitor some property or properties of the distributed thing. For example, a fluid flow meter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fluid monitoring device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#ReturnSystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#ReturnSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#DistributionSystem"/>
+        <rdfs:comment xml:lang="en">A system that returns energy and/or mass from consumers</rdfs:comment>
+        <rdfs:label xml:lang="en">Return system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#Segment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#Segment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">A component used to enable the passage of material or energy. For example, pipes and ducts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#StorageDevice -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#StorageDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">A device used to store mass or energy. For example, a water tank.</rdfs:comment>
+        <rdfs:label xml:lang="en">Storage device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fso#SupplySystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fso#SupplySystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#DistributionSystem"/>
+        <rdfs:comment xml:lang="en">A system that supplies energy and/or mass to consumers</rdfs:comment>
+        <rdfs:label xml:lang="en">Supply system</rdfs:label>
     </owl:Class>
     
 
@@ -258,36 +501,30 @@
 
 
     <owl:Class rdf:about="https://w3id.org/fso#System">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Element"/>
         <rdfs:comment xml:lang="en">A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties.</rdfs:comment>
-        <rdfs:comment xml:lang="da">Et system definerer egenskaber der er gældende for alle komponenter i systemet og fungerer dermed som en grupperingsmekanisme. Typiske systemegenskaber omfatter fluidegenskaber som fluidtype, temperatur og termiske egenskaber.</rdfs:comment>
-        <rdfs:label xml:lang="da">System</rdfs:label>
         <rdfs:label xml:lang="en">System</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/fso#feeds -->
+    <!-- https://w3id.org/fso#Terminal -->
 
 
-    <owl:Class rdf:about="https://w3id.org/fso#feeds"/>
-    
-
-
-    <!-- https://w3id.org/fso#returnsFluidTo -->
-
-
-    <owl:Class rdf:about="https://w3id.org/fso#returnsFluidTo">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#feeds"/>
+    <owl:Class rdf:about="https://w3id.org/fso#Terminal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">A component used to allow material flow out of a distribution system. For example, faucets and air vents.</rdfs:comment>
+        <rdfs:label xml:lang="en">Terminal</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/fso#suppliesFluidTo -->
+    <!-- https://w3id.org/fso#TreatmentDevice -->
 
 
-    <owl:Class rdf:about="https://w3id.org/fso#suppliesFluidTo">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#feeds"/>
+    <owl:Class rdf:about="https://w3id.org/fso#TreatmentDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fso#Component"/>
+        <rdfs:comment xml:lang="en">A device used to change the properties of material flowing through it. For example, filters.</rdfs:comment>
+        <rdfs:label xml:lang="en">Treatment device</rdfs:label>
     </owl:Class>
     
 
@@ -310,36 +547,6 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/fso#">
         <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="https://w3id.org/fso#feeds">
-        <rdfs:comment xml:lang="da"></rdfs:comment>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:label xml:lang="en">feeds</rdfs:label>
-        <rdfs:label xml:lang="da">føder</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/fso#returnsFluidTo">
-        <rdfs:comment xml:lang="da"></rdfs:comment>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:label xml:lang="da">returnerer fluid til</rdfs:label>
-        <rdfs:label xml:lang="en">returns fluid to</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/fso#suppliesFluidTo">
-        <rdfs:comment xml:lang="da"></rdfs:comment>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:label xml:lang="da">forsyner fluid til</rdfs:label>
-        <rdfs:label xml:lang="en">supplies fluid to</rdfs:label>
-    </rdf:Description>
 </rdf:RDF>
 
 

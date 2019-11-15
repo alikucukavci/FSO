@@ -1,8 +1,8 @@
 {
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
-    "languages" : [ "en", "da", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/vocommons/voaf", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/fso", "http://xmlns.com/foaf/0.1" ],
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/vocommons/voaf", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/fso" ],
     "title" : {
       "en" : "The Fluid Systems Ontology (FSO)"
     },
@@ -38,12 +38,12 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Ville Kukkonen",
+        "value" : "Ali Kücükavci",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Ali Kücükavci",
+        "value" : "Ville Kukkonen",
         "type" : "label"
       } ],
       "contributor" : [ {
@@ -92,28 +92,67 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "4",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "7",
-    "type" : "rdfs:Literal"
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
   }, {
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
     "type" : "owl:Thing"
+  }, {
+    "id" : "30",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Thing"
   }, {
-    "id" : "13",
-    "type" : "owl:Class"
+    "id" : "32",
+    "type" : "owl:Thing"
   }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -122,45 +161,53 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "System",
-      "en" : "System",
-      "da" : "System"
+      "en" : "System"
     },
+    "subClasses" : [ "6" ],
     "comment" : {
-      "en" : "A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties.",
-      "da" : "Et system definerer egenskaber der er gældende for alle komponenter i systemet og fungerer dermed som en grupperingsmekanisme. Typiske systemegenskaber omfatter fluidegenskaber som fluidtype, temperatur og termiske egenskaber."
+      "en" : "A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties."
     },
-    "id" : "4",
-    "superClasses" : [ "6" ]
+    "id" : "5"
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "7",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "https://w3id.org/fso#Element",
+    "iri" : "https://w3id.org/fso#TreatmentDevice",
     "baseIri" : "https://w3id.org/fso",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Element"
+      "IRI-based" : "TreatmentDevice",
+      "en" : "Treatment device"
     },
-    "subClasses" : [ "4", "10" ],
-    "id" : "6"
+    "comment" : {
+      "en" : "A device used to change the properties of material flowing through it. For example, filters."
+    },
+    "id" : "10",
+    "superClasses" : [ "11" ]
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "5",
+    "iri" : "https://w3id.org/fso#Component",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
     "label" : {
-      "undefined" : "Thing"
-    }
+      "IRI-based" : "Component",
+      "en" : "Component"
+    },
+    "subClasses" : [ "14", "15", "10", "16", "17", "18", "19", "20", "21" ],
+    "comment" : {
+      "en" : "A component contained by a fso:System"
+    },
+    "id" : "11"
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "1",
+    "iri" : "https://w3id.org/fso#DistributionSystem",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
     "label" : {
-      "undefined" : "Thing"
-    }
+      "IRI-based" : "DistributionSystem",
+      "en" : "Distribution system"
+    },
+    "subClasses" : [ "31", "35" ],
+    "comment" : {
+      "en" : "A system that distributes energy and/or mass"
+    },
+    "id" : "6",
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
     "baseIri" : "http://purl.org/vocommons/voaf",
@@ -174,30 +221,188 @@
       "labels" : { }
     } ],
     "attributes" : [ "external" ],
-    "id" : "13"
+    "id" : "42"
   }, {
-    "iri" : "http://xmlns.com/foaf/0.1/Person",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Person"
-    },
-    "attributes" : [ "external" ],
-    "id" : "14"
-  }, {
-    "iri" : "https://w3id.org/fso#HeatExchanger",
+    "iri" : "https://w3id.org/fso#StorageDevice",
     "baseIri" : "https://w3id.org/fso",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "HeatExchanger",
-      "en" : "Heat Exchanger",
-      "da" : "Varmeveksler"
+      "IRI-based" : "StorageDevice",
+      "en" : "Storage device"
     },
     "comment" : {
-      "en" : "A heat exchanger is a device designed to transfer energy from one medium to another. Examples of heat exchangers include radiators, heating coils, water/water heat exchangers and mixing plants.",
-      "da" : "En varmeveksler er en komponent designet til at overføre energi fra et medie til et andet. Eksempler på varmevekslere omfatter radiatorer, varmeflader, vand/vand varmevekslere og blandeanlæg."
+      "en" : "A device used to store mass or energy. For example, a water tank."
     },
-    "id" : "10",
+    "id" : "15",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "34",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "30",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/fso#Material",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Material",
+      "en" : "Material"
+    },
+    "comment" : {
+      "en" : "A substance"
+    },
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/fso#Fluid",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fluid",
+      "en" : "Fluid"
+    },
+    "comment" : {
+      "en" : "A liquid or gaseous substance, for example water or some mixture"
+    },
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/fso#EnergyConversionDevice",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyConversionDevice",
+      "en" : "Energy conversion device"
+    },
+    "comment" : {
+      "en" : "A device that is used to convert energy from one form to another, or move it from one system to another. Potential examples include motors and heat exhangers."
+    },
+    "id" : "16",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/fso#SupplySystem",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplySystem",
+      "en" : "Supply system"
+    },
+    "comment" : {
+      "en" : "A system that supplies energy and/or mass to consumers"
+    },
+    "id" : "35",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "32",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/fso#MonitoringDevice",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MonitoringDevice",
+      "en" : "Fluid monitoring device"
+    },
+    "comment" : {
+      "en" : "A device used to monitor some property or properties of the distributed thing. For example, a fluid flow meter."
+    },
+    "id" : "14",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/fso#Terminal",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Terminal",
+      "en" : "Terminal"
+    },
+    "comment" : {
+      "en" : "A component used to allow material flow out of a distribution system. For example, faucets and air vents."
+    },
+    "id" : "17",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/fso#FlowMovingDevice",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlowMovingDevice",
+      "en" : "Flow moving device"
+    },
+    "comment" : {
+      "en" : "A device used to induce movement in a network. For example, pumps and fans."
+    },
+    "id" : "18",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/fso#Segment",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Segment",
+      "en" : "Segment"
+    },
+    "comment" : {
+      "en" : "A component used to enable the passage of material or energy. For example, pipes and ducts."
+    },
+    "id" : "19",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/fso#FlowController",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlowController",
+      "en" : "Flow controller"
+    },
+    "comment" : {
+      "en" : "A device that has the potential to control the flow in a network. For example, valves and dampers."
+    },
+    "id" : "20",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/fso#Fitting",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fitting",
+      "en" : "Fitting"
+    },
+    "comment" : {
+      "en" : "A component used to connect segments to each other, or to other components. For example, a junction in a pipe system."
+    },
+    "id" : "21",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/fso#ReturnSystem",
+    "baseIri" : "https://w3id.org/fso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReturnSystem",
+      "en" : "Return system"
+    },
+    "comment" : {
+      "en" : "A system that returns energy and/or mass from consumers"
+    },
+    "id" : "31",
     "superClasses" : [ "6" ]
   } ],
   "property" : [ {
@@ -207,13 +412,10 @@
     "id" : "3",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "8",
-    "type" : "rdfs:SubClassOf"
+    "id" : "4",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "9",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "11",
     "type" : "owl:objectProperty"
   }, {
     "id" : "12",
@@ -222,53 +424,144 @@
     "id" : "2",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "15",
-    "type" : "owl:datatypeProperty"
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://w3id.org/fso#fedBy",
-    "inverse" : "2",
+    "iri" : "https://w3id.org/fso#hasFluid",
     "baseIri" : "https://w3id.org/fso",
     "range" : "1",
     "label" : {
-      "IRI-based" : "fedBy",
-      "en" : "fed by",
-      "da" : "fødes af"
+      "IRI-based" : "hasFluid",
+      "en" : "has fluid"
     },
+    "superproperty" : [ "2" ],
     "domain" : "1",
-    "comment" : { },
-    "attributes" : [ "object", "transitive" ],
+    "comment" : {
+      "en" : "Relates a system to the fluid it contains"
+    },
+    "attributes" : [ "object" ],
     "id" : "0"
   }, {
-    "iri" : "https://w3id.org/fso#hasComponent",
+    "iri" : "https://w3id.org/fso#hasReturnTemperature",
     "baseIri" : "https://w3id.org/fso",
-    "range" : "5",
-    "annotations" : {
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/fso#HeatExchanger",
-        "type" : "iri"
-      } ]
-    },
+    "range" : "1",
     "label" : {
-      "IRI-based" : "hasComponent",
-      "en" : "has component",
-      "da" : "har komponent"
+      "IRI-based" : "hasReturnTemperature",
+      "en" : "has return temperature"
     },
-    "domain" : "4",
-    "comment" : { },
+    "superproperty" : [ "4" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between a system and its return temperature"
+    },
     "attributes" : [ "object" ],
     "id" : "3"
   }, {
-    "range" : "6",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "8"
+    "iri" : "https://w3id.org/fso#hasTemperature",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasTemperature",
+      "en" : "has temperature"
+    },
+    "superproperty" : [ "7" ],
+    "domain" : "1",
+    "subproperty" : [ "3", "8" ],
+    "comment" : {
+      "en" : "Relation between a thing and its temperature"
+    },
+    "attributes" : [ "object" ],
+    "id" : "4"
   }, {
-    "range" : "6",
-    "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "iri" : "https://w3id.org/fso#hasDensity",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasDensity",
+      "en" : "has density"
+    },
+    "superproperty" : [ "7" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "A relation between a system and a its density"
+    },
+    "attributes" : [ "object" ],
     "id" : "9"
   }, {
     "iri" : "https://w3id.org/fso#suppliesFluidTo",
@@ -276,48 +569,291 @@
     "range" : "1",
     "label" : {
       "IRI-based" : "suppliesFluidTo",
-      "en" : "supplies fluid to",
-      "da" : "forsyner fluid til"
+      "en" : "supplies fluid to"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation of a component that returns fluid to another component"
+    },
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
     },
     "domain" : "1",
-    "comment" : { },
+    "subproperty" : [ "0", "22", "7", "23", "24", "25", "26" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/fso#exchangesHeatWith",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "exchangesHeatWith",
+      "en" : "exchanges heat with"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between two things which have a heat exchange connection"
+    },
+    "attributes" : [ "symmetric", "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/fso#hasMassFlow",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasMassFlow",
+      "en" : "has mass flow"
+    },
+    "superproperty" : [ "7" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between a thing and its mass flow rate"
+    },
     "attributes" : [ "object" ],
-    "id" : "11"
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/fso#feeds",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "feeds"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "1",
+    "subproperty" : [ "12", "28" ],
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/fso#hasReturnSystem",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasReturnSystem",
+      "en" : "has return system"
+    },
+    "superproperty" : [ "24" ],
+    "domain" : "30",
+    "comment" : {
+      "en" : "Relation between a system and its return system"
+    },
+    "attributes" : [ "asymmetric", "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/fso#exchangesFluidWith",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "exchangesFluidWith",
+      "en" : "exchanges fluid with"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "subproperty" : [ "13" ],
+    "comment" : {
+      "en" : "Relation between two things which have a fluid exchange connection"
+    },
+    "attributes" : [ "symmetric", "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/fso#hasComponent",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasComponent",
+      "en" : "has component"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "32",
+    "comment" : {
+      "en" : "Relates a system to a component it contains"
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/fso#hasSupplySystem",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasSupplySystem",
+      "en" : "has supply system"
+    },
+    "superproperty" : [ "24" ],
+    "domain" : "34",
+    "comment" : {
+      "en" : "Relation between a system and its supply system"
+    },
+    "attributes" : [ "asymmetric", "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/fso#hasProperty",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasProperty",
+      "en" : "has property"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "subproperty" : [ "9", "36", "27", "4", "37" ],
+    "comment" : {
+      "en" : "Relation between a thing and a property intrinsic to it"
+    },
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/fso#isMadeOfMaterial",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isMadeOfMaterial",
+      "en" : "is made of material"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between a thing and the material it is made of"
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
   }, {
     "iri" : "https://w3id.org/fso#returnsFluidTo",
     "baseIri" : "https://w3id.org/fso",
     "range" : "1",
     "label" : {
       "IRI-based" : "returnsFluidTo",
-      "en" : "returns fluid to",
-      "da" : "returnerer fluid til"
+      "en" : "returns fluid to"
     },
+    "superproperty" : [ "13" ],
     "domain" : "1",
-    "comment" : { },
+    "comment" : {
+      "en" : "Relation of a component that supplies fluid to another component"
+    },
     "attributes" : [ "object" ],
-    "id" : "12"
+    "id" : "28"
   }, {
-    "iri" : "https://w3id.org/fso#feeds",
+    "range" : "6",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "11",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "6",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "range" : "11",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "11",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "11",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "44"
+  }, {
+    "range" : "5",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "11",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "11",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://w3id.org/fso#hasSupplyTemperature",
     "baseIri" : "https://w3id.org/fso",
     "range" : "1",
     "label" : {
-      "IRI-based" : "feeds",
-      "en" : "feeds",
-      "da" : "føder"
+      "IRI-based" : "hasSupplyTemperature",
+      "en" : "has supply temperature"
     },
+    "superproperty" : [ "4" ],
     "domain" : "1",
-    "comment" : { },
-    "attributes" : [ "object", "transitive" ],
-    "id" : "2"
+    "comment" : {
+      "en" : "Relation between a system and its supply temperature"
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
   }, {
-    "iri" : "http://xmlns.com/foaf/0.1/name",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "7",
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "11",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "11",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/fso#hasSubSystem",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "5",
     "label" : {
-      "IRI-based" : "name"
+      "IRI-based" : "hasSubSystem",
+      "en" : "has subsystem"
     },
+    "superproperty" : [ "2" ],
+    "domain" : "5",
+    "subproperty" : [ "33", "29" ],
+    "comment" : {
+      "en" : "Relation between a system and its subsystem"
+    },
+    "attributes" : [ "asymmetric", "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/fso#hasHeatCapacity",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasHeatCapacity",
+      "en" : "has heat capacity"
+    },
+    "superproperty" : [ "7" ],
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "15"
+    "comment" : {
+      "en" : "A relation between a thing and its heat capacity"
+    },
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/fso#hasPowerOutput",
+    "baseIri" : "https://w3id.org/fso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasPowerOutput"
+    },
+    "superproperty" : [ "7" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "36"
   } ]
 }

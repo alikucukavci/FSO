@@ -50,15 +50,6 @@
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://schema.org/domainIncludes
-<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/rangeIncludes
-<http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
-<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # 
 # 
 # #################################################################
@@ -68,45 +59,139 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/fso#fedBy
-<https://w3id.org/fso#fedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/fso#fedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/fso#feeds> .
-<https://w3id.org/fso#fedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/fso#fedBy> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
-<https://w3id.org/fso#fedBy> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
-<https://w3id.org/fso#fedBy> <http://www.w3.org/2000/01/rdf-schema#label> "fed by"@en .
-<https://w3id.org/fso#fedBy> <http://www.w3.org/2000/01/rdf-schema#label> "fødes af"@da .
+# https://w3id.org/fso#exchangesFluidWith
+<https://w3id.org/fso#exchangesFluidWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#exchangesFluidWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/fso#exchangesFluidWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/fso#exchangesFluidWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between two things which have a fluid exchange connection"@en .
+<https://w3id.org/fso#exchangesFluidWith> <http://www.w3.org/2000/01/rdf-schema#label> "exchanges fluid with"@en .
+# 
+# https://w3id.org/fso#exchangesHeatWith
+<https://w3id.org/fso#exchangesHeatWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#exchangesHeatWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/fso#exchangesHeatWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/fso#exchangesHeatWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between two things which have a heat exchange connection"@en .
+<https://w3id.org/fso#exchangesHeatWith> <http://www.w3.org/2000/01/rdf-schema#label> "exchanges heat with"@en .
 # 
 # https://w3id.org/fso#feeds
 <https://w3id.org/fso#feeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/fso#feeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/fso#feeds> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#exchangesFluidWith> .
 # 
 # https://w3id.org/fso#hasComponent
 <https://w3id.org/fso#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fso#System> .
-<https://w3id.org/fso#hasComponent> <http://schema.org/domainIncludes> <https://w3id.org/fso#HeatExchanger> .
-<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
-<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
-<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "har komponent"@da .
+<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a system to a component it contains"@en .
 <https://w3id.org/fso#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component"@en .
+# 
+# https://w3id.org/fso#hasDensity
+<https://w3id.org/fso#hasDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasDensity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#hasProperty> .
+<https://w3id.org/fso#hasDensity> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a system and a its density"@en .
+<https://w3id.org/fso#hasDensity> <http://www.w3.org/2000/01/rdf-schema#label> "has density"@en .
+# 
+# https://w3id.org/fso#hasFluid
+<https://w3id.org/fso#hasFluid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasFluid> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/fso#hasFluid> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a system to the fluid it contains"@en .
+<https://w3id.org/fso#hasFluid> <http://www.w3.org/2000/01/rdf-schema#label> "has fluid"@en .
+# 
+# https://w3id.org/fso#hasHeatCapacity
+<https://w3id.org/fso#hasHeatCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasHeatCapacity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#hasProperty> .
+<https://w3id.org/fso#hasHeatCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a thing and its heat capacity"@en .
+<https://w3id.org/fso#hasHeatCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "has heat capacity"@en .
+# 
+# https://w3id.org/fso#hasMassFlow
+<https://w3id.org/fso#hasMassFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasMassFlow> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#hasProperty> .
+<https://w3id.org/fso#hasMassFlow> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a thing and its mass flow rate"@en .
+<https://w3id.org/fso#hasMassFlow> <http://www.w3.org/2000/01/rdf-schema#label> "has mass flow"@en .
+# 
+# https://w3id.org/fso#hasPowerOutput
+<https://w3id.org/fso#hasPowerOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasPowerOutput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#hasProperty> .
+# 
+# https://w3id.org/fso#hasProperty
+<https://w3id.org/fso#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/fso#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a thing and a property intrinsic to it"@en .
+<https://w3id.org/fso#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
+# 
+# https://w3id.org/fso#hasReturnSystem
+<https://w3id.org/fso#hasReturnSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasReturnSystem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#hasSubSystem> .
+<https://w3id.org/fso#hasReturnSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/fso#hasReturnSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fso#ReturnSystem> .
+<https://w3id.org/fso#hasReturnSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a system and its return system"@en .
+<https://w3id.org/fso#hasReturnSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has return system"@en .
+# 
+# https://w3id.org/fso#hasReturnTemperature
+<https://w3id.org/fso#hasReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#hasTemperature> .
+<https://w3id.org/fso#hasReturnTemperature> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fso#hasReturnSystem> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fso#hasTemperature> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/fso#hasReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a system and its return temperature"@en .
+<https://w3id.org/fso#hasReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "has return temperature"@en .
+# 
+# https://w3id.org/fso#hasSubSystem
+<https://w3id.org/fso#hasSubSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/fso#hasSubSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/fso#hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/fso#System> .
+<https://w3id.org/fso#hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fso#System> .
+<https://w3id.org/fso#hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a system and its subsystem"@en .
+<https://w3id.org/fso#hasSubSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has subsystem"@en .
+# 
+# https://w3id.org/fso#hasSupplySystem
+<https://w3id.org/fso#hasSupplySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasSupplySystem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#hasSubSystem> .
+<https://w3id.org/fso#hasSupplySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/fso#hasSupplySystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fso#SupplySystem> .
+<https://w3id.org/fso#hasSupplySystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a system and its supply system"@en .
+<https://w3id.org/fso#hasSupplySystem> <http://www.w3.org/2000/01/rdf-schema#label> "has supply system"@en .
+# 
+# https://w3id.org/fso#hasSupplyTemperature
+<https://w3id.org/fso#hasSupplyTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasSupplyTemperature> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#hasTemperature> .
+<https://w3id.org/fso#hasSupplyTemperature> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fso#hasSupplySystem> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/fso#hasTemperature> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/fso#hasSupplyTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a system and its supply temperature"@en .
+<https://w3id.org/fso#hasSupplyTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "has supply temperature"@en .
+# 
+# https://w3id.org/fso#hasTemperature
+<https://w3id.org/fso#hasTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#hasTemperature> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#hasProperty> .
+<https://w3id.org/fso#hasTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a thing and its temperature"@en .
+<https://w3id.org/fso#hasTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "has temperature"@en .
+# 
+# https://w3id.org/fso#isMadeOfMaterial
+<https://w3id.org/fso#isMadeOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#isMadeOfMaterial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/fso#isMadeOfMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a thing and the material it is made of"@en .
+<https://w3id.org/fso#isMadeOfMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "is made of material"@en .
 # 
 # https://w3id.org/fso#returnsFluidTo
 <https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#feeds> .
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation of a component that supplies fluid to another component"@en .
+<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "returns fluid to"@en .
 # 
 # https://w3id.org/fso#suppliesFluidTo
 <https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Data properties
-# #
-# #################################################################
-# 
-# 
-# http://xmlns.com/foaf/0.1/name
-<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fso#feeds> .
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation of a component that returns fluid to another component"@en .
+<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "supplies fluid to"@en .
 # 
 # 
 # 
@@ -120,38 +205,97 @@
 # http://purl.org/vocommons/voaf#Vocabulary
 <http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# http://xmlns.com/foaf/0.1/Person
-<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# https://w3id.org/fso#Component
+<https://w3id.org/fso#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#Component> <http://www.w3.org/2000/01/rdf-schema#comment> "A component contained by a fso:System"@en .
+<https://w3id.org/fso#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component"@en .
 # 
-# https://w3id.org/fso#Element
-<https://w3id.org/fso#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# https://w3id.org/fso#DistributionSystem
+<https://w3id.org/fso#DistributionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#DistributionSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#System> .
+<https://w3id.org/fso#DistributionSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A system that distributes energy and/or mass"@en .
+<https://w3id.org/fso#DistributionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution system"@en .
 # 
-# https://w3id.org/fso#HeatExchanger
-<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Element> .
-<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#comment> "A heat exchanger is a device designed to transfer energy from one medium to another. Examples of heat exchangers include radiators, heating coils, water/water heat exchangers and mixing plants."@en .
-<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#comment> "En varmeveksler er en komponent designet til at overføre energi fra et medie til et andet. Eksempler på varmevekslere omfatter radiatorer, varmeflader, vand/vand varmevekslere og blandeanlæg."@da .
-<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Heat Exchanger"@en .
-<https://w3id.org/fso#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Varmeveksler"@da .
+# https://w3id.org/fso#EnergyConversionDevice
+<https://w3id.org/fso#EnergyConversionDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that is used to convert energy from one form to another, or move it from one system to another. Potential examples include motors and heat exhangers."@en .
+<https://w3id.org/fso#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Energy conversion device"@en .
+# 
+# https://w3id.org/fso#Fitting
+<https://w3id.org/fso#Fitting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#Fitting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#Fitting> <http://www.w3.org/2000/01/rdf-schema#comment> "A component used to connect segments to each other, or to other components. For example, a junction in a pipe system."@en .
+<https://w3id.org/fso#Fitting> <http://www.w3.org/2000/01/rdf-schema#label> "Fitting"@en .
+# 
+# https://w3id.org/fso#FlowController
+<https://w3id.org/fso#FlowController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#FlowController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#FlowController> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that has the potential to control the flow in a network. For example, valves and dampers."@en .
+<https://w3id.org/fso#FlowController> <http://www.w3.org/2000/01/rdf-schema#label> "Flow controller"@en .
+# 
+# https://w3id.org/fso#FlowMovingDevice
+<https://w3id.org/fso#FlowMovingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device used to induce movement in a network. For example, pumps and fans."@en .
+<https://w3id.org/fso#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Flow moving device"@en .
+# 
+# https://w3id.org/fso#Fluid
+<https://w3id.org/fso#Fluid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#Fluid> <http://www.w3.org/2000/01/rdf-schema#comment> "A liquid or gaseous substance, for example water or some mixture"@en .
+<https://w3id.org/fso#Fluid> <http://www.w3.org/2000/01/rdf-schema#label> "Fluid"@en .
+# 
+# https://w3id.org/fso#Material
+<https://w3id.org/fso#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A substance"@en .
+<https://w3id.org/fso#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material"@en .
+# 
+# https://w3id.org/fso#MonitoringDevice
+<https://w3id.org/fso#MonitoringDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#MonitoringDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#MonitoringDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device used to monitor some property or properties of the distributed thing. For example, a fluid flow meter."@en .
+<https://w3id.org/fso#MonitoringDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Fluid monitoring device"@en .
+# 
+# https://w3id.org/fso#ReturnSystem
+<https://w3id.org/fso#ReturnSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#ReturnSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#DistributionSystem> .
+<https://w3id.org/fso#ReturnSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A system that returns energy and/or mass from consumers"@en .
+<https://w3id.org/fso#ReturnSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Return system"@en .
+# 
+# https://w3id.org/fso#Segment
+<https://w3id.org/fso#Segment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#Segment> <http://www.w3.org/2000/01/rdf-schema#comment> "A component used to enable the passage of material or energy. For example, pipes and ducts."@en .
+<https://w3id.org/fso#Segment> <http://www.w3.org/2000/01/rdf-schema#label> "Segment"@en .
+# 
+# https://w3id.org/fso#StorageDevice
+<https://w3id.org/fso#StorageDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#StorageDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#StorageDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device used to store mass or energy. For example, a water tank."@en .
+<https://w3id.org/fso#StorageDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Storage device"@en .
+# 
+# https://w3id.org/fso#SupplySystem
+<https://w3id.org/fso#SupplySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#SupplySystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#DistributionSystem> .
+<https://w3id.org/fso#SupplySystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A system that supplies energy and/or mass to consumers"@en .
+<https://w3id.org/fso#SupplySystem> <http://www.w3.org/2000/01/rdf-schema#label> "Supply system"@en .
 # 
 # https://w3id.org/fso#System
 <https://w3id.org/fso#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Element> .
 <https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#comment> "A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties."@en .
-<https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#comment> "Et system definerer egenskaber der er gældende for alle komponenter i systemet og fungerer dermed som en grupperingsmekanisme. Typiske systemegenskaber omfatter fluidegenskaber som fluidtype, temperatur og termiske egenskaber."@da .
-<https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@da .
 <https://w3id.org/fso#System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en .
 # 
-# https://w3id.org/fso#feeds
-<https://w3id.org/fso#feeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# https://w3id.org/fso#Terminal
+<https://w3id.org/fso#Terminal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#Terminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#Terminal> <http://www.w3.org/2000/01/rdf-schema#comment> "A component used to allow material flow out of a distribution system. For example, faucets and air vents."@en .
+<https://w3id.org/fso#Terminal> <http://www.w3.org/2000/01/rdf-schema#label> "Terminal"@en .
 # 
-# https://w3id.org/fso#returnsFluidTo
-<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#feeds> .
-# 
-# https://w3id.org/fso#suppliesFluidTo
-<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#feeds> .
+# https://w3id.org/fso#TreatmentDevice
+<https://w3id.org/fso#TreatmentDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/fso#TreatmentDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/fso#Component> .
+<https://w3id.org/fso#TreatmentDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device used to change the properties of material flowing through it. For example, filters."@en .
+<https://w3id.org/fso#TreatmentDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Treatment device"@en .
 # 
 # 
 # 
@@ -165,29 +309,5 @@
 # https://w3id.org/fso#
 <https://w3id.org/fso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/fso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
-<https://w3id.org/fso#feeds> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
-<https://w3id.org/fso#feeds> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
-<https://w3id.org/fso#feeds> <http://www.w3.org/2000/01/rdf-schema#label> "feeds"@en .
-<https://w3id.org/fso#feeds> <http://www.w3.org/2000/01/rdf-schema#label> "føder"@da .
-# 
-<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
-<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
-<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "returnerer fluid til"@da .
-<https://w3id.org/fso#returnsFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "returns fluid to"@en .
-# 
-<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> ""@da .
-<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
-<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "forsyner fluid til"@da .
-<https://w3id.org/fso#suppliesFluidTo> <http://www.w3.org/2000/01/rdf-schema#label> "supplies fluid to"@en .
 # 
 # Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
