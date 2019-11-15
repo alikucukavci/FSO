@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/fso#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/fso#","name":"The Fluid Systems Ontology (FSO)", "headline":"Some description in english", "datePublished":"2019-11-06T12:00:00", "version":"0.0.1", "license":"https://creativecommons.org/licenses/by/1.0/", "author":[{"@type":"Person","name":"Ali Kücükavci"},{"@type":"Person","name":"Mads Holten Rasmussen"},{"@type":"Person","name":"Ville Kukkonen"}], "contributor":[{"@type":"Person","name":"All contributing members of the W3C Linked Building Data Community Group"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/fso#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/fso#","name":"The Fluid Systems Ontology (FSO)", "headline":"Some description in english", "datePublished":"2019-11-06T12:00:00", "version":"0.0.1", "license":"https://creativecommons.org/licenses/by/1.0/", "author":[{"@type":"Person","name":"https://orcid.org/0000-0002-6519-7057","url":"https://orcid.org/0000-0002-6519-7057"},{"@type":"Person","name":"Ali Kücükavci"},{"@type":"Person","name":"Mads Holten Rasmussen"},{"@type":"Person","name":"Ville Kukkonen"}], "contributor":[{"@type":"Person","name":"All contributing members of the W3C Linked Building Data Community Group"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -64,7 +64,7 @@ function loadTOC(){
 <dt>Revision:</dt>
 <dd>0.0.1</dd>
 <dt>Authors:</dt>
-<dd>Ali Kücükavci</dd><dd>Mads Holten Rasmussen</dd><dd>Ville Kukkonen</dd>
+<dd><a href="https://orcid.org/0000-0002-6519-7057">https://orcid.org/0000-0002-6519-7057</a></dd><dd>Ali Kücükavci</dd><dd>Mads Holten Rasmussen</dd><dd>Ville Kukkonen</dd>
 
 <dt>Contributors:</dt>
 <dd>All contributing members of the W3C Linked Building Data Community Group</dd>
@@ -72,7 +72,7 @@ function loadTOC(){
 <dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/1.0/-blue.svg" alt="https://creativecommons.org/licenses/by/1.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <dt>Cite as:</dt>
-<dd>Ali Kücükavci,Mads Holten Rasmussen,Ville Kukkonen. The Fluid Systems Ontology (FSO). Revision: 0.0.1. Retrieved from: https://w3id.org/fso/0.0.1</dd>
+<dd>https://orcid.org/0000-0002-6519-7057,Ali Kücükavci,Mads Holten Rasmussen,Ville Kukkonen. The Fluid Systems Ontology (FSO). Revision: 0.0.1. Retrieved from: https://w3id.org/fso/0.0.1</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -97,18 +97,15 @@ This is a place holder text for the introduction. The introduction should briefl
 <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
 <tbody>
 <tr><td><b>fso</b></td><td>&lt;https://w3id.org/fso#&gt;</td></tr>
-<tr><td><b>schema</b></td><td>&lt;http://schema.org&gt;</td></tr>
 <tr><td><b>fso</b></td><td>&lt;https://w3id.org/fso&gt;</td></tr>
-<tr><td><b>ns</b></td><td>&lt;http://www.w3.org/2003/06/sw-vocab-status/ns&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
 <tr><td><b>voaf</b></td><td>&lt;http://purl.org/vocommons/voaf&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
-<tr><td><b>orcid-org</b></td><td>&lt;https://orcid.org&gt;</td></tr>
-<tr><td><b>0-1</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
-<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
-<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>orcid-org</b></td><td>&lt;https://orcid.org&gt;</td></tr>
 <tr><td><b>default namespace</b></td><td>&lt;https://w3id.org/fso&gt;</td></tr>
 </tbody>
 </table>
@@ -124,24 +121,59 @@ This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul class="hlist">
    <li>
-      <a href="#HeatExchanger" title="https://w3id.org/fso#HeatExchanger">Heat Exchanger</a>
+      <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
    </li>
    <li>
-      <a href="#returnsFluidTo" title="https://w3id.org/fso#returnsFluidTo">
-         <span>returns fluid to</span>
-      </a>
+      <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
    </li>
    <li>
-      <a href="#suppliesFluidTo" title="https://w3id.org/fso#suppliesFluidTo">
-         <span>supplies fluid to</span>
-      </a>
+      <a href="#EnergyConversionDevice" title="https://w3id.org/fso#EnergyConversionDevice">Energy conversion device</a>
+   </li>
+   <li>
+      <a href="#Fitting" title="https://w3id.org/fso#Fitting">Fitting</a>
+   </li>
+   <li>
+      <a href="#FlowController" title="https://w3id.org/fso#FlowController">Flow controller</a>
+   </li>
+   <li>
+      <a href="#FlowMovingDevice" title="https://w3id.org/fso#FlowMovingDevice">Flow moving device</a>
+   </li>
+   <li>
+      <a href="#Fluid" title="https://w3id.org/fso#Fluid">Fluid</a>
+   </li>
+   <li>
+      <a href="#MonitoringDevice" title="https://w3id.org/fso#MonitoringDevice">Fluid monitoring device</a>
+   </li>
+   <li>
+      <a href="#Material" title="https://w3id.org/fso#Material">Material</a>
+   </li>
+   <li>
+      <a href="#ReturnSystem" title="https://w3id.org/fso#ReturnSystem">Return system</a>
+   </li>
+   <li>
+      <a href="#Segment" title="https://w3id.org/fso#Segment">Segment</a>
+   </li>
+   <li>
+      <a href="#StorageDevice" title="https://w3id.org/fso#StorageDevice">Storage device</a>
+   </li>
+   <li>
+      <a href="#SupplySystem" title="https://w3id.org/fso#SupplySystem">Supply system</a>
    </li>
    <li>
       <a href="#System" title="https://w3id.org/fso#System">System</a>
    </li>
+   <li>
+      <a href="#Terminal" title="https://w3id.org/fso#Terminal">Terminal</a>
+   </li>
+   <li>
+      <a href="#TreatmentDevice" title="https://w3id.org/fso#TreatmentDevice">Treatment device</a>
+   </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#fedBy" title="https://w3id.org/fso#fedBy">fed by</a>
+      <a href="#exchangesFluidWith" title="https://w3id.org/fso#exchangesFluidWith">exchanges fluid with</a>
+   </li>
+   <li>
+      <a href="#exchangesHeatWith" title="https://w3id.org/fso#exchangesHeatWith">exchanges heat with</a>
    </li>
    <li>
       <a href="#feeds" title="https://w3id.org/fso#feeds">
@@ -150,6 +182,53 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#hasComponent" title="https://w3id.org/fso#hasComponent">has component</a>
+   </li>
+   <li>
+      <a href="#hasDensity" title="https://w3id.org/fso#hasDensity">has density</a>
+   </li>
+   <li>
+      <a href="#hasFluid" title="https://w3id.org/fso#hasFluid">has fluid</a>
+   </li>
+   <li>
+      <a href="#hasHeatCapacity" title="https://w3id.org/fso#hasHeatCapacity">has heat capacity</a>
+   </li>
+   <li>
+      <a href="#hasMassFlow" title="https://w3id.org/fso#hasMassFlow">has mass flow</a>
+   </li>
+   <li>
+      <a href="#hasPowerOutput" title="https://w3id.org/fso#hasPowerOutput">
+         <span>has power output</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasProperty" title="https://w3id.org/fso#hasProperty">has property</a>
+   </li>
+   <li>
+      <a href="#hasReturnSystem" title="https://w3id.org/fso#hasReturnSystem">has return system</a>
+   </li>
+   <li>
+      <a href="#hasReturnTemperature" title="https://w3id.org/fso#hasReturnTemperature">has return temperature</a>
+   </li>
+   <li>
+      <a href="#hasSubSystem" title="https://w3id.org/fso#hasSubSystem">has subsystem</a>
+   </li>
+   <li>
+      <a href="#hasSupplySystem" title="https://w3id.org/fso#hasSupplySystem">has supply system</a>
+   </li>
+   <li>
+      <a href="#hasSupplyTemperature" title="https://w3id.org/fso#hasSupplyTemperature">has supply temperature</a>
+   </li>
+   <li>
+      <a href="#hasTemperature" title="https://w3id.org/fso#hasTemperature">has temperature</a>
+   </li>
+   <li>
+      <a href="#isMadeOfMaterial" title="https://w3id.org/fso#isMadeOfMaterial">is made of material</a>
+   </li>
+   <li>
+      <a href="#returnsFluidTo" title="https://w3id.org/fso#returnsFluidTo">returns fluid to</a>
+   </li>
+   <li>
+      <a href="#suppliesFluidTo" title="https://w3id.org/fso#suppliesFluidTo">supplies fluid to</a>
    </li>
 </ul><h4>Annotation Properties</h4><ul class="hlist">
    <li>
@@ -165,11 +244,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
          <span>description</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://schema.org/domainIncludes" title="http://schema.org/domainIncludes">
-         <span>domain includes</span>
       </a>
    </li>
    <li>
@@ -196,17 +270,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
          <span>preferred namespace uri</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://schema.org/rangeIncludes" title="http://schema.org/rangeIncludes">
-         <span>range includes</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
-         title="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
-         <span>term status</span>
       </a>
    </li>
    <li>
@@ -239,77 +302,301 @@ This section provides details for each class and property defined by The Fluid S
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#HeatExchanger" title="https://w3id.org/fso#HeatExchanger">Heat Exchanger</a>
+         <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
       </li>
       <li>
-         <a href="#returnsFluidTo" title="https://w3id.org/fso#returnsFluidTo">
-            <span>returns fluid to</span>
-         </a>
+         <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
       </li>
       <li>
-         <a href="#suppliesFluidTo" title="https://w3id.org/fso#suppliesFluidTo">
-            <span>supplies fluid to</span>
-         </a>
+         <a href="#EnergyConversionDevice" title="https://w3id.org/fso#EnergyConversionDevice">Energy conversion device</a>
+      </li>
+      <li>
+         <a href="#Fitting" title="https://w3id.org/fso#Fitting">Fitting</a>
+      </li>
+      <li>
+         <a href="#FlowController" title="https://w3id.org/fso#FlowController">Flow controller</a>
+      </li>
+      <li>
+         <a href="#FlowMovingDevice" title="https://w3id.org/fso#FlowMovingDevice">Flow moving device</a>
+      </li>
+      <li>
+         <a href="#Fluid" title="https://w3id.org/fso#Fluid">Fluid</a>
+      </li>
+      <li>
+         <a href="#MonitoringDevice" title="https://w3id.org/fso#MonitoringDevice">Fluid monitoring device</a>
+      </li>
+      <li>
+         <a href="#Material" title="https://w3id.org/fso#Material">Material</a>
+      </li>
+      <li>
+         <a href="#ReturnSystem" title="https://w3id.org/fso#ReturnSystem">Return system</a>
+      </li>
+      <li>
+         <a href="#Segment" title="https://w3id.org/fso#Segment">Segment</a>
+      </li>
+      <li>
+         <a href="#StorageDevice" title="https://w3id.org/fso#StorageDevice">Storage device</a>
+      </li>
+      <li>
+         <a href="#SupplySystem" title="https://w3id.org/fso#SupplySystem">Supply system</a>
       </li>
       <li>
          <a href="#System" title="https://w3id.org/fso#System">System</a>
       </li>
+      <li>
+         <a href="#Terminal" title="https://w3id.org/fso#Terminal">Terminal</a>
+      </li>
+      <li>
+         <a href="#TreatmentDevice" title="https://w3id.org/fso#TreatmentDevice">Treatment device</a>
+      </li>
    </ul>
-   <div class="entity" id="HeatExchanger">
-      <h3>Heat Exchanger<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Component">
+      <h3>Component<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/fso#HeatExchanger</p>
+         <strong>IRI:</strong> https://w3id.org/fso#Component</p>
       <div class="comment">
-         <span class="markdown">A heat exchanger is a device designed to transfer energy from one medium to another. Examples of heat exchangers include radiators, heating coils, water/water heat exchangers and mixing plants.</span>
+         <span class="markdown">A component contained by a fso:System</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>has sub-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/fso#Element">element</span>
+            <a href="#EnergyConversionDevice" title="https://w3id.org/fso#EnergyConversionDevice">Energy conversion device</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Fitting" title="https://w3id.org/fso#Fitting">Fitting</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FlowController" title="https://w3id.org/fso#FlowController">Flow controller</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FlowMovingDevice" title="https://w3id.org/fso#FlowMovingDevice">Flow moving device</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MonitoringDevice" title="https://w3id.org/fso#MonitoringDevice">Fluid monitoring device</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Segment" title="https://w3id.org/fso#Segment">Segment</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StorageDevice" title="https://w3id.org/fso#StorageDevice">Storage device</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Terminal" title="https://w3id.org/fso#Terminal">Terminal</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TreatmentDevice" title="https://w3id.org/fso#TreatmentDevice">Treatment device</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
+         <dt>is in range of</dt>
          <dd>
             <a href="#hasComponent" title="https://w3id.org/fso#hasComponent">has component</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="returnsFluidTo">
-      <h3>returns fluid to<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="DistributionSystem">
+      <h3>Distribution system<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/fso#returnsFluidTo</p>
+         <strong>IRI:</strong> https://w3id.org/fso#DistributionSystem</p>
+      <div class="comment">
+         <span class="markdown">A system that distributes energy and/or mass</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/fso#feeds">feeds</span>
+            <a href="#System" title="https://w3id.org/fso#System">System</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>object property</dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ReturnSystem" title="https://w3id.org/fso#ReturnSystem">Return system</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SupplySystem" title="https://w3id.org/fso#SupplySystem">Supply system</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
-   <div class="entity" id="suppliesFluidTo">
-      <h3>supplies fluid to<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="EnergyConversionDevice">
+      <h3>Energy conversion device<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/fso#suppliesFluidTo</p>
+         <strong>IRI:</strong> https://w3id.org/fso#EnergyConversionDevice</p>
+      <div class="comment">
+         <span class="markdown">A device that is used to convert energy from one form to another, or move it from one system to another. Potential examples include motors and heat exhangers.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/fso#feeds">feeds</span>
+            <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>object property</dd>
+      </dl>
+   </div>
+   <div class="entity" id="Fitting">
+      <h3>Fitting<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#Fitting</p>
+      <div class="comment">
+         <span class="markdown">A component used to connect segments to each other, or to other components. For example, a junction in a pipe system.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FlowController">
+      <h3>Flow controller<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#FlowController</p>
+      <div class="comment">
+         <span class="markdown">A device that has the potential to control the flow in a network. For example, valves and dampers.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FlowMovingDevice">
+      <h3>Flow moving device<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#FlowMovingDevice</p>
+      <div class="comment">
+         <span class="markdown">A device used to induce movement in a network. For example, pumps and fans.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Fluid">
+      <h3>Fluid<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#Fluid</p>
+      <div class="comment">
+         <span class="markdown">A liquid or gaseous substance, for example water or some mixture</span>
+      </div>
+   </div>
+   <div class="entity" id="MonitoringDevice">
+      <h3>Fluid monitoring device<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#MonitoringDevice</p>
+      <div class="comment">
+         <span class="markdown">A device used to monitor some property or properties of the distributed thing. For example, a fluid flow meter.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Material">
+      <h3>Material<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#Material</p>
+      <div class="comment">
+         <span class="markdown">A substance</span>
+      </div>
+   </div>
+   <div class="entity" id="ReturnSystem">
+      <h3>Return system<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#ReturnSystem</p>
+      <div class="comment">
+         <span class="markdown">A system that returns energy and/or mass from consumers</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasReturnSystem" title="https://w3id.org/fso#hasReturnSystem">has return system</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Segment">
+      <h3>Segment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#Segment</p>
+      <div class="comment">
+         <span class="markdown">A component used to enable the passage of material or energy. For example, pipes and ducts.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StorageDevice">
+      <h3>Storage device<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#StorageDevice</p>
+      <div class="comment">
+         <span class="markdown">A device used to store mass or energy. For example, a water tank.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SupplySystem">
+      <h3>Supply system<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#SupplySystem</p>
+      <div class="comment">
+         <span class="markdown">A system that supplies energy and/or mass to consumers</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSupplySystem" title="https://w3id.org/fso#hasSupplySystem">has supply system</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="System">
@@ -323,15 +610,56 @@ This section provides details for each class and property defined by The Fluid S
          <span class="markdown">A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties.</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>has sub-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/fso#Element">element</span>
+            <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasComponent" title="https://w3id.org/fso#hasComponent">has component</a>
+            <a href="#hasSubSystem" title="https://w3id.org/fso#hasSubSystem">has subsystem</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSubSystem" title="https://w3id.org/fso#hasSubSystem">has subsystem</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Terminal">
+      <h3>Terminal<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#Terminal</p>
+      <div class="comment">
+         <span class="markdown">A component used to allow material flow out of a distribution system. For example, faucets and air vents.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TreatmentDevice">
+      <h3>Treatment device<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#TreatmentDevice</p>
+      <div class="comment">
+         <span class="markdown">A device used to change the properties of material flowing through it. For example, filters.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -339,7 +667,10 @@ This section provides details for each class and property defined by The Fluid S
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#fedBy" title="https://w3id.org/fso#fedBy">fed by</a>
+         <a href="#exchangesFluidWith" title="https://w3id.org/fso#exchangesFluidWith">exchanges fluid with</a>
+      </li>
+      <li>
+         <a href="#exchangesHeatWith" title="https://w3id.org/fso#exchangesHeatWith">exchanges heat with</a>
       </li>
       <li>
          <a href="#feeds" title="https://w3id.org/fso#feeds">
@@ -349,25 +680,97 @@ This section provides details for each class and property defined by The Fluid S
       <li>
          <a href="#hasComponent" title="https://w3id.org/fso#hasComponent">has component</a>
       </li>
+      <li>
+         <a href="#hasDensity" title="https://w3id.org/fso#hasDensity">has density</a>
+      </li>
+      <li>
+         <a href="#hasFluid" title="https://w3id.org/fso#hasFluid">has fluid</a>
+      </li>
+      <li>
+         <a href="#hasHeatCapacity" title="https://w3id.org/fso#hasHeatCapacity">has heat capacity</a>
+      </li>
+      <li>
+         <a href="#hasMassFlow" title="https://w3id.org/fso#hasMassFlow">has mass flow</a>
+      </li>
+      <li>
+         <a href="#hasPowerOutput" title="https://w3id.org/fso#hasPowerOutput">
+            <span>has power output</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasProperty" title="https://w3id.org/fso#hasProperty">has property</a>
+      </li>
+      <li>
+         <a href="#hasReturnSystem" title="https://w3id.org/fso#hasReturnSystem">has return system</a>
+      </li>
+      <li>
+         <a href="#hasReturnTemperature" title="https://w3id.org/fso#hasReturnTemperature">has return temperature</a>
+      </li>
+      <li>
+         <a href="#hasSubSystem" title="https://w3id.org/fso#hasSubSystem">has subsystem</a>
+      </li>
+      <li>
+         <a href="#hasSupplySystem" title="https://w3id.org/fso#hasSupplySystem">has supply system</a>
+      </li>
+      <li>
+         <a href="#hasSupplyTemperature" title="https://w3id.org/fso#hasSupplyTemperature">has supply temperature</a>
+      </li>
+      <li>
+         <a href="#hasTemperature" title="https://w3id.org/fso#hasTemperature">has temperature</a>
+      </li>
+      <li>
+         <a href="#isMadeOfMaterial" title="https://w3id.org/fso#isMadeOfMaterial">is made of material</a>
+      </li>
+      <li>
+         <a href="#returnsFluidTo" title="https://w3id.org/fso#returnsFluidTo">returns fluid to</a>
+      </li>
+      <li>
+         <a href="#suppliesFluidTo" title="https://w3id.org/fso#suppliesFluidTo">supplies fluid to</a>
+      </li>
    </ul>
-   <div class="entity" id="fedBy">
-      <h3>fed by<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="exchangesFluidWith">
+      <h3>exchanges fluid with<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/fso#fedBy</p>
+         <strong>IRI:</strong> https://w3id.org/fso#exchangesFluidWith</p>
       <div class="comment">
-         <span class="markdown"/>
+         <span class="markdown">Relation between two things which have a fluid exchange connection</span>
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> transitive</p>
+            <strong>has characteristics:</strong> symmetric</p>
          <dl>
-            <dt>is inverse of</dt>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has sub-properties</dt>
             <dd>
                <a href="#feeds" title="https://w3id.org/fso#feeds">feeds</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="exchangesHeatWith">
+      <h3>exchanges heat with<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#exchangesHeatWith</p>
+      <div class="comment">
+         <span class="markdown">Relation between two things which have a heat exchange connection</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> symmetric</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
          </dl>
       </div>
@@ -380,16 +783,18 @@ This section provides details for each class and property defined by The Fluid S
       <p>
          <strong>IRI:</strong> https://w3id.org/fso#feeds</p>
       <div class="description">
-         <p>
-            <strong>has characteristics:</strong> transitive</p>
          <dl>
-            <dt>is inverse of</dt>
+            <dt>has super-properties</dt>
             <dd>
-               <a href="#fedBy" title="https://w3id.org/fso#fedBy">fed by</a>
+               <a href="#exchangesFluidWith" title="https://w3id.org/fso#exchangesFluidWith">exchanges fluid with</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
-            <dt>is also defined as</dt>
-            <dd>class</dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#returnsFluidTo" title="https://w3id.org/fso#returnsFluidTo">returns fluid to</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#suppliesFluidTo" title="https://w3id.org/fso#suppliesFluidTo">supplies fluid to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -401,19 +806,374 @@ This section provides details for each class and property defined by The Fluid S
       <p>
          <strong>IRI:</strong> https://w3id.org/fso#hasComponent</p>
       <div class="comment">
-         <span class="markdown"/>
+         <span class="markdown">Relates a system to a component it contains</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDensity">
+      <h3>has density<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasDensity</p>
+      <div class="comment">
+         <span class="markdown">A relation between a system and a its density</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasProperty" title="https://w3id.org/fso#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFluid">
+      <h3>has fluid<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasFluid</p>
+      <div class="comment">
+         <span class="markdown">Relates a system to the fluid it contains</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasHeatCapacity">
+      <h3>has heat capacity<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasHeatCapacity</p>
+      <div class="comment">
+         <span class="markdown">A relation between a thing and its heat capacity</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasProperty" title="https://w3id.org/fso#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMassFlow">
+      <h3>has mass flow<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasMassFlow</p>
+      <div class="comment">
+         <span class="markdown">Relation between a thing and its mass flow rate</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasProperty" title="https://w3id.org/fso#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPowerOutput">
+      <h3>has power output<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasPowerOutput</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasProperty" title="https://w3id.org/fso#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasProperty">
+      <h3>has property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasProperty</p>
+      <div class="comment">
+         <span class="markdown">Relation between a thing and a property intrinsic to it</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasDensity" title="https://w3id.org/fso#hasDensity">has density</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasHeatCapacity" title="https://w3id.org/fso#hasHeatCapacity">has heat capacity</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasMassFlow" title="https://w3id.org/fso#hasMassFlow">has mass flow</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasPowerOutput" title="https://w3id.org/fso#hasPowerOutput">has power output</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasTemperature" title="https://w3id.org/fso#hasTemperature">has temperature</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasReturnSystem">
+      <h3>has return system<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasReturnSystem</p>
+      <div class="comment">
+         <span class="markdown">Relation between a system and its return system</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> asymmetric</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasSubSystem" title="https://w3id.org/fso#hasSubSystem">has subsystem</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ReturnSystem" title="https://w3id.org/fso#ReturnSystem">Return system</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasReturnTemperature">
+      <h3>has return temperature<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasReturnTemperature</p>
+      <div class="comment">
+         <span class="markdown">Relation between a system and its return temperature</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasTemperature" title="https://w3id.org/fso#hasTemperature">has temperature</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="#hasReturnSystem" title="https://w3id.org/fso#hasReturnSystem">has return system</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#hasTemperature" title="https://w3id.org/fso#hasTemperature">has temperature</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubSystem">
+      <h3>has subsystem<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasSubSystem</p>
+      <div class="comment">
+         <span class="markdown">Relation between a system and its subsystem</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> asymmetric</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasReturnSystem" title="https://w3id.org/fso#hasReturnSystem">has return system</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasSupplySystem" title="https://w3id.org/fso#hasSupplySystem">has supply system</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#System" title="https://w3id.org/fso#System">System</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>domain includes</dt>
+            <dt>has range</dt>
             <dd>
-               <a href="#HeatExchanger" title="https://w3id.org/fso#HeatExchanger">Heat Exchanger</a>
+               <a href="#System" title="https://w3id.org/fso#System">System</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSupplySystem">
+      <h3>has supply system<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasSupplySystem</p>
+      <div class="comment">
+         <span class="markdown">Relation between a system and its supply system</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> asymmetric</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasSubSystem" title="https://w3id.org/fso#hasSubSystem">has subsystem</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SupplySystem" title="https://w3id.org/fso#SupplySystem">Supply system</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSupplyTemperature">
+      <h3>has supply temperature<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasSupplyTemperature</p>
+      <div class="comment">
+         <span class="markdown">Relation between a system and its supply temperature</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasTemperature" title="https://w3id.org/fso#hasTemperature">has temperature</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="#hasSupplySystem" title="https://w3id.org/fso#hasSupplySystem">has supply system</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#hasTemperature" title="https://w3id.org/fso#hasTemperature">has temperature</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTemperature">
+      <h3>has temperature<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#hasTemperature</p>
+      <div class="comment">
+         <span class="markdown">Relation between a thing and its temperature</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasProperty" title="https://w3id.org/fso#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasReturnTemperature" title="https://w3id.org/fso#hasReturnTemperature">has return temperature</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasSupplyTemperature" title="https://w3id.org/fso#hasSupplyTemperature">has supply temperature</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isMadeOfMaterial">
+      <h3>is made of material<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#isMadeOfMaterial</p>
+      <div class="comment">
+         <span class="markdown">Relation between a thing and the material it is made of</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="returnsFluidTo">
+      <h3>returns fluid to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#returnsFluidTo</p>
+      <div class="comment">
+         <span class="markdown">Relation of a component that supplies fluid to another component</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#feeds" title="https://w3id.org/fso#feeds">feeds</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="suppliesFluidTo">
+      <h3>supplies fluid to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#suppliesFluidTo</p>
+      <div class="comment">
+         <span class="markdown">Relation of a component that returns fluid to another component</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#feeds" title="https://w3id.org/fso#feeds">feeds</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -434,11 +1194,6 @@ This section provides details for each class and property defined by The Fluid S
       <li>
          <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
             <span>description</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://schema.org/domainIncludes" title="http://schema.org/domainIncludes">
-            <span>domain includes</span>
          </a>
       </li>
       <li>
@@ -465,17 +1220,6 @@ This section provides details for each class and property defined by The Fluid S
       <li>
          <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
             <span>preferred namespace uri</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://schema.org/rangeIncludes" title="http://schema.org/rangeIncludes">
-            <span>range includes</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
-            title="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
-            <span>term status</span>
          </a>
       </li>
       <li>
@@ -507,14 +1251,6 @@ This section provides details for each class and property defined by The Fluid S
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
-   </div>
-   <div class="entity" id="http://schema.org/domainIncludes">
-      <h3>domain includes<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://schema.org/domainIncludes</p>
    </div>
    <div class="entity" id="http://purl.org/dc/terms/issued">
       <h3>issued<sup class="type-ap" title="annotation property">ap</sup>
@@ -555,22 +1291,6 @@ This section provides details for each class and property defined by The Fluid S
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
-   </div>
-   <div class="entity" id="http://schema.org/rangeIncludes">
-      <h3>range includes<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://schema.org/rangeIncludes</p>
-   </div>
-   <div class="entity" id="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
-      <h3>term status<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/06/sw-vocab-status/ns#term_status</p>
    </div>
    <div class="entity" id="http://purl.org/dc/terms/title">
       <h3>title<sup class="type-ap" title="annotation property">ap</sup>

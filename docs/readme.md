@@ -32,18 +32,3 @@ b) Execute Chrome with the following commands :
 (UNX) /usr/bin/google-chrome --allow-file-access-from-files
 
 Do you have a problem? open an issue at https://github.com/dgarijo/Widoco
-
-Implementing changes to the ontology
-==========
-If you do any changes to fso.ttl and want to display it on https://alikucukavci.github.io/FSO/index-en.html, then following steps has to be executed. 
-1. Do your changes in fso.ttl
-2. Open WIDOC.jar desktop app, which you have downloaded
-3. In WIDOC, Select template, change project name to "docs"
-4. In WIDOC, Select template, change create template documentation from URI to "https://raw.githubusercontent.com/alikucukavci/FSO/master/fso.ttl"
-5. In WIDOC, Select template, change project export location to the local repo of FSO
-6. In WIDOC, Load Sections, check all boxes
-7. In WIDOC, Finish, click Finish
-8. In repo, replace the file .htaccess from folder .../FSO/docs with .htaccess from folder .../FSO   
-9. Do git add, commit and push to origin master
-10. Open https://alikucukavci.github.io/FSO/index-en.html and see if your changes are implemented
-
