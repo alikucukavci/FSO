@@ -19,8 +19,7 @@
 <https://w3id.org/fso#> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/fso/0.0.1> ;
                          dcterms:contributor "All contributing members of the W3C Linked Building Data Community Group" ;
-                         dcterms:creator <https://orcid.org/0000-0002-6519-7057> ,
-                                         "Ali Kücükavci" ,
+                         dcterms:creator "Ali Kücükavci" ,
                                          "Mads Holten Rasmussen" ,
                                          "Ville Kukkonen" ;
                          dcterms:description "Some description in english"@en ;
@@ -76,6 +75,10 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:label "top object property"@en .
+
 
 ###  https://w3id.org/fso#exchangesFluidWith
 fso:exchangesFluidWith rdf:type owl:ObjectProperty ;
