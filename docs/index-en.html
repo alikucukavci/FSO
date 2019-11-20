@@ -123,6 +123,11 @@ This ontology has the following classes and properties.</span>
       <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
    </li>
    <li>
+      <a href="#ConsumptionSystem" title="https://w3id.org/fso#ConsumptionSystem">
+         <span>consumption system</span>
+      </a>
+   </li>
+   <li>
       <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
    </li>
    <li>
@@ -139,6 +144,11 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#MonitoringDevice" title="https://w3id.org/fso#MonitoringDevice">Monitoring device</a>
+   </li>
+   <li>
+      <a href="#ProductionSystem" title="https://w3id.org/fso#ProductionSystem">
+         <span>production system</span>
+      </a>
    </li>
    <li>
       <a href="#ReturnSystem" title="https://w3id.org/fso#ReturnSystem">Return system</a>
@@ -163,7 +173,7 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#connectedTo" title="https://w3id.org/fso#connectedTo">connected to</a>
+      <a href="#connectedWith" title="https://w3id.org/fso#connectedWith">connected with</a>
    </li>
    <li>
       <a href="#exchangesElectricChargeWith" title="https://w3id.org/fso#exchangesElectricChargeWith">exchanges electric charge with</a>
@@ -175,9 +185,7 @@ This ontology has the following classes and properties.</span>
       <a href="#exchangesHeatWith" title="https://w3id.org/fso#exchangesHeatWith">exchanges heat with</a>
    </li>
    <li>
-      <a href="#feeds" title="https://w3id.org/fso#feeds">
-         <span>feeds</span>
-      </a>
+      <a href="#feeds" title="https://w3id.org/fso#feeds">føder</a>
    </li>
    <li>
       <a href="#hasComponent" title="https://w3id.org/fso#hasComponent">has component</a>
@@ -202,8 +210,18 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#isReturnedFluidToBy" title="https://w3id.org/fso#isReturnedFluidToBy">
+         <span>is returned fluid to by</span>
+      </a>
+   </li>
+   <li>
       <a href="#isSubSystemOf" title="https://w3id.org/fso#isSubSystemOf">
          <span>is sub system of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isSuppliedFluidToBy" title="https://w3id.org/fso#isSuppliedFluidToBy">
+         <span>is supplied fluid to by</span>
       </a>
    </li>
    <li>
@@ -213,59 +231,10 @@ This ontology has the following classes and properties.</span>
       <a href="#suppliesFluidTo" title="https://w3id.org/fso#suppliesFluidTo">supplies fluid to</a>
    </li>
    <li>
-      <a href="#transfersHeatFrom" title="https://w3id.org/fso#transfersHeatFrom">
-         <span>transfers heat from</span>
-      </a>
+      <a href="#transfersHeatFrom" title="https://w3id.org/fso#transfersHeatFrom">transfers heat from</a>
    </li>
    <li>
       <a href="#transfersHeatTo" title="https://w3id.org/fso#transfersHeatTo">transfers heat to</a>
-   </li>
-</ul><h4>Annotation Properties</h4><ul class="hlist">
-   <li>
-      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
-         <span>contributor</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
-         <span>creator</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
-         <span>description</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
-         <span>issued</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
-         <span>license</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
-         <span>modified</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
-         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
-         <span>preferred namespace prefix</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
-         <span>preferred namespace uri</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
-         <span>title</span>
-      </a>
    </li>
 </ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
@@ -295,6 +264,11 @@ This section provides details for each class and property defined by The Flow Sy
          <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
       </li>
       <li>
+         <a href="#ConsumptionSystem" title="https://w3id.org/fso#ConsumptionSystem">
+            <span>consumption system</span>
+         </a>
+      </li>
+      <li>
          <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
       </li>
       <li>
@@ -311,6 +285,11 @@ This section provides details for each class and property defined by The Flow Sy
       </li>
       <li>
          <a href="#MonitoringDevice" title="https://w3id.org/fso#MonitoringDevice">Monitoring device</a>
+      </li>
+      <li>
+         <a href="#ProductionSystem" title="https://w3id.org/fso#ProductionSystem">
+            <span>production system</span>
+         </a>
       </li>
       <li>
          <a href="#ReturnSystem" title="https://w3id.org/fso#ReturnSystem">Return system</a>
@@ -370,6 +349,27 @@ This section provides details for each class and property defined by The Flow Sy
          </dd>
       </dl>
    </div>
+   <div class="entity" id="ConsumptionSystem">
+      <h3>consumption system<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#ConsumptionSystem</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#System" title="https://w3id.org/fso#System">System</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProductionSystem" title="https://w3id.org/fso#ProductionSystem">production system</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="DistributionSystem">
       <h3>Distribution system<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -390,6 +390,12 @@ This section provides details for each class and property defined by The Flow Sy
          <dd>
             <a href="#ReturnSystem" title="https://w3id.org/fso#ReturnSystem">Return system</a>
             <sup class="type-c" title="class">c</sup>, <a href="#SupplySystem" title="https://w3id.org/fso#SupplySystem">Supply system</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConsumptionSystem" title="https://w3id.org/fso#ConsumptionSystem">consumption system</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProductionSystem" title="https://w3id.org/fso#ProductionSystem">production system</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -480,6 +486,27 @@ This section provides details for each class and property defined by The Flow Sy
          <dt>has super-classes</dt>
          <dd>
             <a href="#Component" title="https://w3id.org/fso#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ProductionSystem">
+      <h3>production system<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#ProductionSystem</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#System" title="https://w3id.org/fso#System">System</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConsumptionSystem" title="https://w3id.org/fso#ConsumptionSystem">consumption system</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -580,6 +607,8 @@ This section provides details for each class and property defined by The Flow Sy
          <dt>has sub-classes</dt>
          <dd>
             <a href="#DistributionSystem" title="https://w3id.org/fso#DistributionSystem">Distribution system</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ConsumptionSystem" title="https://w3id.org/fso#ConsumptionSystem">consumption system</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProductionSystem" title="https://w3id.org/fso#ProductionSystem">production system</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -640,7 +669,7 @@ This section provides details for each class and property defined by The Flow Sy
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#connectedTo" title="https://w3id.org/fso#connectedTo">connected to</a>
+         <a href="#connectedWith" title="https://w3id.org/fso#connectedWith">connected with</a>
       </li>
       <li>
          <a href="#exchangesElectricChargeWith" title="https://w3id.org/fso#exchangesElectricChargeWith">exchanges electric charge with</a>
@@ -652,9 +681,7 @@ This section provides details for each class and property defined by The Flow Sy
          <a href="#exchangesHeatWith" title="https://w3id.org/fso#exchangesHeatWith">exchanges heat with</a>
       </li>
       <li>
-         <a href="#feeds" title="https://w3id.org/fso#feeds">
-            <span>feeds</span>
-         </a>
+         <a href="#feeds" title="https://w3id.org/fso#feeds">føder</a>
       </li>
       <li>
          <a href="#hasComponent" title="https://w3id.org/fso#hasComponent">has component</a>
@@ -679,8 +706,18 @@ This section provides details for each class and property defined by The Flow Sy
          </a>
       </li>
       <li>
+         <a href="#isReturnedFluidToBy" title="https://w3id.org/fso#isReturnedFluidToBy">
+            <span>is returned fluid to by</span>
+         </a>
+      </li>
+      <li>
          <a href="#isSubSystemOf" title="https://w3id.org/fso#isSubSystemOf">
             <span>is sub system of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isSuppliedFluidToBy" title="https://w3id.org/fso#isSuppliedFluidToBy">
+            <span>is supplied fluid to by</span>
          </a>
       </li>
       <li>
@@ -690,21 +727,19 @@ This section provides details for each class and property defined by The Flow Sy
          <a href="#suppliesFluidTo" title="https://w3id.org/fso#suppliesFluidTo">supplies fluid to</a>
       </li>
       <li>
-         <a href="#transfersHeatFrom" title="https://w3id.org/fso#transfersHeatFrom">
-            <span>transfers heat from</span>
-         </a>
+         <a href="#transfersHeatFrom" title="https://w3id.org/fso#transfersHeatFrom">transfers heat from</a>
       </li>
       <li>
          <a href="#transfersHeatTo" title="https://w3id.org/fso#transfersHeatTo">transfers heat to</a>
       </li>
    </ul>
-   <div class="entity" id="connectedTo">
-      <h3>connected to<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="connectedWith">
+      <h3>connected with<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/fso#connectedTo</p>
+         <strong>IRI:</strong> https://w3id.org/fso#connectedWith</p>
       <div class="comment">
          <span class="markdown">A generic "connection" relation between things.</span>
       </div>
@@ -725,7 +760,7 @@ This section provides details for each class and property defined by The Flow Sy
             </dd>
             <dt>has sub-property chains</dt>
             <dd>
-               <a href="#connectedTo" title="https://w3id.org/fso#connectedTo">connected to</a>
+               <a href="#connectedWith" title="https://w3id.org/fso#connectedWith">connected with</a>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">o</span> 
                <a href="#isComponentOf" title="https://w3id.org/fso#isComponentOf">is component of</a>
@@ -735,14 +770,14 @@ This section provides details for each class and property defined by The Flow Sy
                <a href="#hasComponent" title="https://w3id.org/fso#hasComponent">has component</a>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">o</span> 
-               <a href="#connectedTo" title="https://w3id.org/fso#connectedTo">connected to</a>
+               <a href="#connectedWith" title="https://w3id.org/fso#connectedWith">connected with</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dd>
                <a href="#hasComponent" title="https://w3id.org/fso#hasComponent">has component</a>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">o</span> 
-               <a href="#connectedTo" title="https://w3id.org/fso#connectedTo">connected to</a>
+               <a href="#connectedWith" title="https://w3id.org/fso#connectedWith">connected with</a>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">o</span> 
                <a href="#isComponentOf" title="https://w3id.org/fso#isComponentOf">is component of</a>
@@ -765,7 +800,7 @@ This section provides details for each class and property defined by The Flow Sy
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#connectedTo" title="https://w3id.org/fso#connectedTo">connected to</a>
+               <a href="#connectedWith" title="https://w3id.org/fso#connectedWith">connected with</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-property chains</dt>
@@ -812,12 +847,12 @@ This section provides details for each class and property defined by The Flow Sy
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#connectedTo" title="https://w3id.org/fso#connectedTo">connected to</a>
+               <a href="#connectedWith" title="https://w3id.org/fso#connectedWith">connected with</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#feeds" title="https://w3id.org/fso#feeds">feeds</a>
+               <a href="#feeds" title="https://w3id.org/fso#feeds">føder</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#isFedBy" title="https://w3id.org/fso#isFedBy">is fed by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
@@ -865,7 +900,7 @@ This section provides details for each class and property defined by The Flow Sy
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#connectedTo" title="https://w3id.org/fso#connectedTo">connected to</a>
+               <a href="#connectedWith" title="https://w3id.org/fso#connectedWith">connected with</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
@@ -903,7 +938,7 @@ This section provides details for each class and property defined by The Flow Sy
       </div>
    </div>
    <div class="entity" id="feeds">
-      <h3>feeds<sup class="type-op" title="object property">op</sup>
+      <h3>føder<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -938,7 +973,7 @@ This section provides details for each class and property defined by The Flow Sy
       <p>
          <strong>IRI:</strong> https://w3id.org/fso#hasComponent</p>
       <div class="comment">
-         <span class="markdown">Relates a system to a component it contains. If system A has a subsystem B, which has a component C, then system A is said to have component C as well.</span>
+         <span class="markdown">Relates a system to a component it contains</span>
       </div>
       <div class="description">
          <p>
@@ -1135,9 +1170,37 @@ This section provides details for each class and property defined by The Flow Sy
                <a href="#exchangesFluidWith" title="https://w3id.org/fso#exchangesFluidWith">exchanges fluid with</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#isReturnedFluidToBy" title="https://w3id.org/fso#isReturnedFluidToBy">is returned fluid to by</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#isSuppliedFluidToBy" title="https://w3id.org/fso#isSuppliedFluidToBy">is supplied fluid to by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#feeds" title="https://w3id.org/fso#feeds">feeds</a>
+               <a href="#feeds" title="https://w3id.org/fso#feeds">føder</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isReturnedFluidToBy">
+      <h3>is returned fluid to by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#isReturnedFluidToBy</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#isFedBy" title="https://w3id.org/fso#isFedBy">is fed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#returnsFluidTo" title="https://w3id.org/fso#returnsFluidTo">returns fluid to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1170,6 +1233,28 @@ This section provides details for each class and property defined by The Flow Sy
          </dl>
       </div>
    </div>
+   <div class="entity" id="isSuppliedFluidToBy">
+      <h3>is supplied fluid to by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fso#isSuppliedFluidToBy</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#isFedBy" title="https://w3id.org/fso#isFedBy">is fed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#suppliesFluidTo" title="https://w3id.org/fso#suppliesFluidTo">supplies fluid to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="returnsFluidTo">
       <h3>returns fluid to<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1184,7 +1269,12 @@ This section provides details for each class and property defined by The Flow Sy
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#feeds" title="https://w3id.org/fso#feeds">feeds</a>
+               <a href="#feeds" title="https://w3id.org/fso#feeds">føder</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isReturnedFluidToBy" title="https://w3id.org/fso#isReturnedFluidToBy">is returned fluid to by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-property chains</dt>
@@ -1219,7 +1309,12 @@ This section provides details for each class and property defined by The Flow Sy
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#feeds" title="https://w3id.org/fso#feeds">feeds</a>
+               <a href="#feeds" title="https://w3id.org/fso#feeds">føder</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isSuppliedFluidToBy" title="https://w3id.org/fso#isSuppliedFluidToBy">is supplied fluid to by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-property chains</dt>
@@ -1289,128 +1384,6 @@ This section provides details for each class and property defined by The Flow Sy
             </dd>
          </dl>
       </div>
-   </div>
-</div><div id="annotationproperties">
-   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
-            <span>contributor</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
-            <span>creator</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
-            <span>description</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
-            <span>issued</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
-            <span>license</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
-            <span>modified</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
-            title="http://purl.org/vocab/vann/preferredNamespacePrefix">
-            <span>preferred namespace prefix</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
-            <span>preferred namespace uri</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
-            <span>title</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="http://purl.org/dc/terms/contributor">
-      <h3>contributor<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/creator">
-      <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/description">
-      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/issued">
-      <h3>issued<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/license">
-      <h3>license<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/license</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/modified">
-      <h3>modified<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
-   </div>
-   <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
-      <h3>preferred namespace prefix<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
-   </div>
-   <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
-      <h3>preferred namespace uri<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/title">
-      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
    </div>
 </div><div id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
