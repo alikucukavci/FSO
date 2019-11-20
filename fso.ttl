@@ -76,27 +76,27 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/fso#connectedTo
-fso:connectedTo rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty ;
-                rdf:type owl:SymmetricProperty ;
-                owl:propertyChainAxiom ( fso:connectedTo
-                                         fso:isComponentOf
-                                       ) ,
-                                       ( fso:hasComponent
-                                         fso:connectedTo
-                                       ) ,
-                                       ( fso:hasComponent
-                                         fso:connectedTo
-                                         fso:isComponentOf
-                                       ) ;
-                rdfs:comment "A generic \"connection\" relation between things."@en ;
-                rdfs:label "connected to"@en .
+###  https://w3id.org/fso#connectedWith
+fso:connectedWith rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdf:type owl:SymmetricProperty ;
+                  owl:propertyChainAxiom ( fso:connectedWith
+                                           fso:isComponentOf
+                                         ) ,
+                                         ( fso:hasComponent
+                                           fso:connectedWith
+                                         ) ,
+                                         ( fso:hasComponent
+                                           fso:connectedWith
+                                           fso:isComponentOf
+                                         ) ;
+                  rdfs:comment "A generic \"connection\" relation between things."@en ;
+                  rdfs:label "connected with"@en .
 
 
 ###  https://w3id.org/fso#exchangesElectricChargeWith
 fso:exchangesElectricChargeWith rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf fso:connectedTo ;
+                                rdfs:subPropertyOf fso:connectedWith ;
                                 owl:propertyChainAxiom ( fso:exchangesElectricChargeWith
                                                          fso:isComponentOf
                                                        ) ,
@@ -113,7 +113,7 @@ fso:exchangesElectricChargeWith rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/fso#exchangesFluidWith
 fso:exchangesFluidWith rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf fso:connectedTo ;
+                       rdfs:subPropertyOf fso:connectedWith ;
                        rdf:type owl:SymmetricProperty ;
                        owl:propertyChainAxiom ( fso:exchangesFluidWith
                                                 fso:isComponentOf
@@ -132,7 +132,7 @@ fso:exchangesFluidWith rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/fso#exchangesHeatWith
 fso:exchangesHeatWith rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf fso:connectedTo ;
+                      rdfs:subPropertyOf fso:connectedWith ;
                       rdf:type owl:SymmetricProperty ;
                       owl:propertyChainAxiom ( fso:exchangesHeatWith
                                                fso:isComponentOf
@@ -222,10 +222,22 @@ fso:isFedBy rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf fso:exchangesFluidWith .
 
 
+###  https://w3id.org/fso#isReturnedFluidToBy
+fso:isReturnedFluidToBy rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf fso:isFedBy ;
+                        owl:inverseOf fso:returnsFluidTo .
+
+
 ###  https://w3id.org/fso#isSubSystemOf
 fso:isSubSystemOf rdf:type owl:ObjectProperty ;
                   rdfs:domain fso:System ;
                   rdfs:range fso:System .
+
+
+###  https://w3id.org/fso#isSuppliedFluidToBy
+fso:isSuppliedFluidToBy rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf fso:isFedBy ;
+                        owl:inverseOf fso:suppliesFluidTo .
 
 
 ###  https://w3id.org/fso#returnsFluidTo
@@ -260,8 +272,8 @@ fso:suppliesFluidTo rdf:type owl:ObjectProperty ;
 fso:transfersHeatFrom rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf fso:exchangesHeatWith ;
                       owl:inverseOf fso:transfersHeatTo ;
-                      rdfs:comment "Relation signifying heat exchange with intended or actual direction of heat transfer from the second entity to the first. For example, a cooling coil is intended to absorb the heat from air."@en ,
-                                   "transfers heat from"@en .
+                      rdfs:comment "Relation signifying heat exchange with intended or actual direction of heat transfer from the second entity to the first. For example, a cooling coil is intended to absorb the heat from air."@en ;
+                      rdfs:label "transfers heat from"@en .
 
 
 ###  https://w3id.org/fso#transfersHeatTo
@@ -286,6 +298,11 @@ fso:Component rdf:type owl:Class ;
               rdfs:comment "A component contained by a fso:System"@en ;
               rdfs:label "Component"@en ,
                          "Komponent"@da .
+
+
+###  https://w3id.org/fso#ConsumptionSystem
+fso:ConsumptionSystem rdf:type owl:Class ;
+                      rdfs:subClassOf fso:System .
 
 
 ###  https://w3id.org/fso#DistributionSystem
@@ -334,6 +351,11 @@ fso:MonitoringDevice rdf:type owl:Class ;
                      rdfs:comment "A device used to monitor some property or properties of the distributed thing. For example, a fluid flow meter."@en ;
                      rdfs:label "Monitoring device"@en ,
                                 "Målene enhed"@da .
+
+
+###  https://w3id.org/fso#ProductionSystem
+fso:ProductionSystem rdf:type owl:Class ;
+                     rdfs:subClassOf fso:System .
 
 
 ###  https://w3id.org/fso#ReturnSystem
@@ -401,11 +423,15 @@ fso:TreatmentDevice rdf:type owl:Class ;
 
 
 #################################################################
-#    Annotations
+#    General axioms
 #################################################################
 
-owl:Thing rdfs:label "Thing"@en ,
-                     "Ting"@da .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( fso:ConsumptionSystem
+                fso:DistributionSystem
+                fso:ProductionSystem
+              )
+] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
