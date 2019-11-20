@@ -2,16 +2,14 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 <https://w3id.org/fso/0.0.1> a prov:Entity;
-	 dc:title "The Fluid Systems Ontology (FSO)";
-	 prov:wasAttributedTo <https://orcid.org/0000-0002-6519-7057>;
-	 dc:creator <https://orcid.org/0000-0002-6519-7057>;
+	 dc:title "The Flow Systems Ontology (FSO)";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;
 	 prov:wasAttributedTo :agent3;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:wasRevisionOf <https://w3id.org/fso/0.0.1>;
-	 prov:wasGeneratedAt "2019-11-06T12:00:00";
+	 prov:wasGeneratedAt "2019-11-18T12:00:00";
 .
 :agent0 a prov:Agent; foaf:name "Ali Kücükavci".
 :agent1 a prov:Agent; foaf:name "Mads Holten Rasmussen".

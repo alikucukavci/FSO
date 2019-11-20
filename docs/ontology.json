@@ -1,4 +1,16 @@
 [ {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#ConsumptionSystem"
+    }, {
+      "@id" : "https://w3id.org/fso#DistributionSystem"
+    }, {
+      "@id" : "https://w3id.org/fso#ProductionSystem"
+    } ]
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -35,8 +47,6 @@
     "@value" : "All contributing members of the W3C Linked Building Data Community Group"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "https://orcid.org/0000-0002-6519-7057"
-  }, {
     "@value" : "Ali Kücükavci"
   }, {
     "@value" : "Mads Holten Rasmussen"
@@ -56,11 +66,11 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2019-11-06T12:00:00"
+    "@value" : "2019-11-18T12:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
-    "@value" : "The Fluid Systems Ontology (FSO)"
+    "@value" : "The Flow Systems Ontology (FSO)"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "fso"
@@ -87,6 +97,15 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Component"
+  }, {
+    "@language" : "da",
+    "@value" : "Komponent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#ConsumptionSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/fso#System"
   } ]
 }, {
   "@id" : "https://w3id.org/fso#DistributionSystem",
@@ -98,6 +117,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Distribution system"
+  }, {
+    "@language" : "da",
+    "@value" : "Fordelingssystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/fso#System"
@@ -110,6 +132,9 @@
     "@value" : "A device that is used to convert energy from one form to another, or move it from one system to another. Potential examples include motors and heat exhangers."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "Energikonverteringsenhed"
+  }, {
     "@language" : "en",
     "@value" : "Energy conversion device"
   } ],
@@ -124,6 +149,9 @@
     "@value" : "A component used to connect segments to each other, or to other components. For example, a junction in a pipe system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "Fitting"
+  }, {
     "@language" : "en",
     "@value" : "Fitting"
   } ],
@@ -140,6 +168,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Flow controller"
+  }, {
+    "@language" : "da",
+    "@value" : "Flow regulator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/fso#Component"
@@ -152,33 +183,14 @@
     "@value" : "A device used to induce movement in a network. For example, pumps and fans."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "Flow bevægende enhed"
+  }, {
     "@language" : "en",
     "@value" : "Flow moving device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/fso#Component"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#Fluid",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A liquid or gaseous substance, for example water or some mixture"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Fluid"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#Material",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A substance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Material"
   } ]
 }, {
   "@id" : "https://w3id.org/fso#MonitoringDevice",
@@ -189,10 +201,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Fluid monitoring device"
+    "@value" : "Monitoring device"
+  }, {
+    "@language" : "da",
+    "@value" : "Målene enhed"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/fso#Component"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#ProductionSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/fso#System"
   } ]
 }, {
   "@id" : "https://w3id.org/fso#ReturnSystem",
@@ -204,6 +225,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Return system"
+  }, {
+    "@language" : "da",
+    "@value" : "Retursystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/fso#DistributionSystem"
@@ -216,6 +240,9 @@
     "@value" : "A component used to enable the passage of material or energy. For example, pipes and ducts."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "Segment"
+  }, {
     "@language" : "en",
     "@value" : "Segment"
   } ],
@@ -227,9 +254,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A device used to store mass or energy. For example, a water tank."
+    "@value" : "A device used to store mass or energy. For example, a water tank or a battery."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "Opbevaringsenhed"
+  }, {
     "@language" : "en",
     "@value" : "Storage device"
   } ],
@@ -244,6 +274,9 @@
     "@value" : "A system that supplies energy and/or mass to consumers"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "Forsyningssystem"
+  }, {
     "@language" : "en",
     "@value" : "Supply system"
   } ],
@@ -258,6 +291,9 @@
     "@value" : "A system is a placeholder for properties that are valid for the components of the system and hence serves as an aggregation function. Common system properties include fluid properties such as the fluid type, temperature and thermal properties."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "System"
+  }, {
     "@language" : "en",
     "@value" : "System"
   } ]
@@ -269,6 +305,9 @@
     "@value" : "A component used to allow material flow out of a distribution system. For example, faucets and air vents."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "Terminal"
+  }, {
     "@language" : "en",
     "@value" : "Terminal"
   } ],
@@ -283,11 +322,84 @@
     "@value" : "A device used to change the properties of material flowing through it. For example, filters."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "Behandlingsenhed"
+  }, {
     "@language" : "en",
     "@value" : "Treatment device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/fso#Component"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#connectedWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A generic \"connection\" relation between things."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "connected with"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#connectedWith"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#connectedWith"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#connectedWith"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#exchangesElectricChargeWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation between things that exchange electric charge, i.e. have electrical current between them."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "exchanges electric charge with"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fso#connectedWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#exchangesElectricChargeWith"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#exchangesElectricChargeWith"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#exchangesElectricChargeWith"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
   } ]
 }, {
   "@id" : "https://w3id.org/fso#exchangesFluidWith",
@@ -299,9 +411,33 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "exchanges fluid with"
+  }, {
+    "@language" : "da",
+    "@value" : "udveksler fluid med"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+    "@id" : "https://w3id.org/fso#connectedWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#exchangesFluidWith"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#exchangesFluidWith"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#exchangesFluidWith"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
   } ]
 }, {
   "@id" : "https://w3id.org/fso#exchangesHeatWith",
@@ -313,24 +449,64 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "exchanges heat with"
+  }, {
+    "@language" : "da",
+    "@value" : "udveksler varme med"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+    "@id" : "https://w3id.org/fso#connectedWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#exchangesHeatWith"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#exchangesHeatWith"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#exchangesHeatWith"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
   } ]
 }, {
   "@id" : "https://w3id.org/fso#feeds",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "føder"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/fso#exchangesFluidWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/fso#isFedBy"
   } ]
 }, {
   "@id" : "https://w3id.org/fso#hasComponent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Relates a system to a component it contains"
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a system to a component it contains. If system A has a subsystem B, which has a component C, then system A is said to have component C as well."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/fso#System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har komponent"
+  }, {
     "@language" : "en",
     "@value" : "has component"
   } ],
@@ -339,82 +515,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#hasDensity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A relation between a system and a its density"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has density"
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/fso#isComponentOf"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/fso#hasProperty"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#hasFluid",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relates a system to the fluid it contains"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has fluid"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#hasHeatCapacity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A relation between a thing and its heat capacity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has heat capacity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/fso#hasProperty"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#hasMassFlow",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relation between a thing and its mass flow rate"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has mass flow"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/fso#hasProperty"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#hasPowerOutput",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/fso#hasProperty"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#hasProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relation between a thing and a property intrinsic to it"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has property"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasSubSystem"
+    }, {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    } ]
   } ]
 }, {
   "@id" : "https://w3id.org/fso#hasReturnSystem",
@@ -423,7 +533,13 @@
     "@language" : "en",
     "@value" : "Relation between a system and its return system"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/fso#System"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har retursystem"
+  }, {
     "@language" : "en",
     "@value" : "has return system"
   } ],
@@ -432,27 +548,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/fso#hasSubSystem"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#hasReturnTemperature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relation between a system and its return temperature"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has return temperature"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/fso#hasTemperature"
-  } ],
-  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/fso#hasReturnSystem"
-    }, {
-      "@id" : "https://w3id.org/fso#hasTemperature"
-    } ]
   } ]
 }, {
   "@id" : "https://w3id.org/fso#hasSubSystem",
@@ -465,6 +560,9 @@
     "@id" : "https://w3id.org/fso#System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har delsystem"
+  }, {
     "@language" : "en",
     "@value" : "has subsystem"
   } ],
@@ -473,6 +571,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/fso#isSubSystemOf"
   } ]
 }, {
   "@id" : "https://w3id.org/fso#hasSupplySystem",
@@ -481,7 +582,13 @@
     "@language" : "en",
     "@value" : "Relation between a system and its supply system"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/fso#System"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har fremløbssystem"
+  }, {
     "@language" : "en",
     "@value" : "has supply system"
   } ],
@@ -492,53 +599,56 @@
     "@id" : "https://w3id.org/fso#hasSubSystem"
   } ]
 }, {
-  "@id" : "https://w3id.org/fso#hasSupplyTemperature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relation between a system and its supply temperature"
+  "@id" : "https://w3id.org/fso#isComponentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/fso#Component"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has supply temperature"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/fso#hasTemperature"
-  } ],
-  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/fso#hasSupplySystem"
-    }, {
-      "@id" : "https://w3id.org/fso#hasTemperature"
-    } ]
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#hasTemperature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relation between a thing and its temperature"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has temperature"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/fso#hasProperty"
-  } ]
-}, {
-  "@id" : "https://w3id.org/fso#isMadeOfMaterial",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relation between a thing and the material it is made of"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "is made of material"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/fso#System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    }, {
+      "@id" : "https://w3id.org/fso#isSubSystemOf"
+    } ]
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#isFedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fso#exchangesFluidWith"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#isReturnedFluidToBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fso#isFedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/fso#returnsFluidTo"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#isSubSystemOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/fso#System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/fso#System"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#isSuppliedFluidToBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fso#isFedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/fso#suppliesFluidTo"
   } ]
 }, {
   "@id" : "https://w3id.org/fso#returnsFluidTo",
@@ -548,11 +658,27 @@
     "@value" : "Relation of a component that supplies fluid to another component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "returnerer fluid til"
+  }, {
     "@language" : "en",
     "@value" : "returns fluid to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/fso#feeds"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#returnsFluidTo"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#returnsFluidTo"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
   } ]
 }, {
   "@id" : "https://w3id.org/fso#suppliesFluidTo",
@@ -562,10 +688,57 @@
     "@value" : "Relation of a component that returns fluid to another component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "forsyner fluid til"
+  }, {
     "@language" : "en",
     "@value" : "supplies fluid to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/fso#feeds"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#hasComponent"
+    }, {
+      "@id" : "https://w3id.org/fso#suppliesFluidTo"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://w3id.org/fso#suppliesFluidTo"
+    }, {
+      "@id" : "https://w3id.org/fso#isComponentOf"
+    } ]
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#transfersHeatFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation signifying heat exchange with intended or actual direction of heat transfer from the second entity to the first. For example, a cooling coil is intended to absorb the heat from air."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "transfers heat from"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fso#exchangesHeatWith"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/fso#transfersHeatTo"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fso#transfersHeatTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation signifying heat exchange with intended or actual direction of heat transfer from the first entity to the second. For example, a radiator is intended to transfer heat to the surroundings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "transfers heat to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fso#exchangesHeatWith"
   } ]
 } ]
