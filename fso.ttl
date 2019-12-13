@@ -149,11 +149,11 @@ fso:exchangesHeatWith rdf:type owl:ObjectProperty ;
                                  "udveksler varme med"@da .
 
 
-###  https://w3id.org/fso#feeds
-fso:feeds rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf fso:exchangesFluidWith ;
-          owl:inverseOf fso:isFedBy ;
-          rdfs:label "føder"@da .
+###  https://w3id.org/fso#feedsFluidTo
+fso:feedsFluidTo rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf fso:exchangesFluidWith ;
+                 owl:inverseOf fso:hasFluidFedBy ;
+                 rdfs:label "føder"@da .
 
 
 ###  https://w3id.org/fso#hasComponent
@@ -170,6 +170,23 @@ fso:hasComponent rdf:type owl:ObjectProperty ;
                               "Relates a system to a component it contains. If system A has a subsystem B, which has a component C, then system A is said to have component C as well."@en ;
                  rdfs:label "har komponent"@da ,
                             "has component"@en .
+
+
+###  https://w3id.org/fso#hasFluidFedBy
+fso:hasFluidFedBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf fso:exchangesFluidWith .
+
+
+###  https://w3id.org/fso#hasFluidReturnedBy
+fso:hasFluidReturnedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf fso:hasFluidFedBy ;
+                       owl:inverseOf fso:returnsFluidTo .
+
+
+###  https://w3id.org/fso#hasFluidSuppliedBy
+fso:hasFluidSuppliedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf fso:hasFluidFedBy ;
+                       owl:inverseOf fso:suppliesFluidTo .
 
 
 ###  https://w3id.org/fso#hasReturnSystem
@@ -217,32 +234,15 @@ fso:isComponentOf rdf:type owl:ObjectProperty ;
                                          ) .
 
 
-###  https://w3id.org/fso#isFedBy
-fso:isFedBy rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf fso:exchangesFluidWith .
-
-
-###  https://w3id.org/fso#isReturnedFluidToBy
-fso:isReturnedFluidToBy rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf fso:isFedBy ;
-                        owl:inverseOf fso:returnsFluidTo .
-
-
 ###  https://w3id.org/fso#isSubSystemOf
 fso:isSubSystemOf rdf:type owl:ObjectProperty ;
                   rdfs:domain fso:System ;
                   rdfs:range fso:System .
 
 
-###  https://w3id.org/fso#isSuppliedFluidToBy
-fso:isSuppliedFluidToBy rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf fso:isFedBy ;
-                        owl:inverseOf fso:suppliesFluidTo .
-
-
 ###  https://w3id.org/fso#returnsFluidTo
 fso:returnsFluidTo rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf fso:feeds ;
+                   rdfs:subPropertyOf fso:feedsFluidTo ;
                    owl:propertyChainAxiom ( fso:hasComponent
                                             fso:returnsFluidTo
                                           ) ,
@@ -256,7 +256,7 @@ fso:returnsFluidTo rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/fso#suppliesFluidTo
 fso:suppliesFluidTo rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf fso:feeds ;
+                    rdfs:subPropertyOf fso:feedsFluidTo ;
                     owl:propertyChainAxiom ( fso:hasComponent
                                              fso:suppliesFluidTo
                                            ) ,
@@ -298,9 +298,9 @@ fso:Component rdf:type owl:Class ;
                          "Komponent"@da .
 
 
-###  https://w3id.org/fso#ConsumptionSystem
-fso:ConsumptionSystem rdf:type owl:Class ;
-                      rdfs:subClassOf fso:System .
+###  https://w3id.org/fso#ConsumerSystem
+fso:ConsumerSystem rdf:type owl:Class ;
+                   rdfs:subClassOf fso:System .
 
 
 ###  https://w3id.org/fso#DistributionSystem
@@ -351,11 +351,6 @@ fso:MonitoringDevice rdf:type owl:Class ;
                                 "Målene enhed"@da .
 
 
-###  https://w3id.org/fso#ProductionSystem
-fso:ProductionSystem rdf:type owl:Class ;
-                     rdfs:subClassOf fso:System .
-
-
 ###  https://w3id.org/fso#ReturnSystem
 fso:ReturnSystem rdf:type owl:Class ;
                  rdfs:subClassOf fso:DistributionSystem ;
@@ -370,6 +365,11 @@ fso:Segment rdf:type owl:Class ;
             rdfs:comment "A component used to enable the passage of material or energy. For example, pipes and ducts."@en ;
             rdfs:label "Segment"@da ,
                        "Segment"@en .
+
+
+###  https://w3id.org/fso#SourceSystem
+fso:SourceSystem rdf:type owl:Class ;
+                 rdfs:subClassOf fso:System .
 
 
 ###  https://w3id.org/fso#StorageDevice
@@ -425,9 +425,9 @@ fso:TreatmentDevice rdf:type owl:Class ;
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( fso:ConsumptionSystem
+  owl:members ( fso:ConsumerSystem
                 fso:DistributionSystem
-                fso:ProductionSystem
+                fso:SourceSystem
               )
 ] .
 

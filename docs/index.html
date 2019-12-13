@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Flow Systems Ontology</title>
+    <script 
+     src='https://www.w3.org/Tools/respec/respec-w3c' 
+     class='remove'></script>
+    <script class='remove'>
+
+      var respecConfig = {
+        specStatus: "unofficial",
+        shortName: "FSO",
+        editors: [
+          {
+            name: "Ville Kukkonen",
+            company: "Granlund | Aalto University",
+            companyURL: "https://www.granlundgroup.com",
+            url: "https://orcid.org/0000-0002-4482-5309"
+          },
+          {
+            name: "Ali Kücükavci",
+            company: "Technical University of Denmark",
+            url: "https://www.dtu.dk/service/telefonbog/person?id=70854&cpid=257913&tab=3&qt=dtuprojectquery",
+            companyURL: "https://www.dtu.dk/english"
+          },
+          {
+            name: "Mads Rasmussen",
+            company: "Niras | Technical University of Denmark",
+            url: "http://www.dtu.dk/english/service/phonebook/person?id=42843&cpid=202565&tab=2&qt=dtupublicationquery",
+            companyURL: "http://www.niras.com/"
+          }
+        ]
+      };
+    </script>
+    <style>
+      th { white-space: nowrap; }
+      th, td { padding: .5em; }
+    </style>
+  </head>
+  <body>
+    <section id="abstract">
+      <p>
+        The Flow Systems Ontology (FSO) is an ontology for describing interconnected systems with material or energy flow connections, and their components.
+      </p>
+      <p style="text-align: center;">The namespace for FSO terms is <span
+        style="font-family: courier;">http://www.w3id.org/fso#</span>.</p>
+    <p style="text-align: center;">The suggested prefix for the FSO namespace
+      is <span style="font-family: courier;">fso</span>.</p>
+    <p style="text-align: center;"> The FSO ontology is available at <a href="http://www.w3id.org/fso">http://www.w3id.org/fso</a>.
+    </p>
+    </section>
+    <section id="sotd">
+    </section>
+    <section id="introduction" class="informative">
+      <h2>Introduction</h2>
+      <p>Systems participating in processes where "flow" is a central concept are found in many disciplines.</p>
+    </section>
+    <section id="axiomatization">
+
+      <h2>Axiomatization</h2>
+
+      <section id="namespaces" class="informative">
+        <h2>Namespaces</h2>
+        <p style="text-align: center;">The namespace for FSO terms is 
+          <span style="font-family: courier;">
+            http://www.w3id.org/fso#
+          </span>.</p>
+        <p style="text-align: center;">The suggested prefix for the FSO namespace is 
+          <span style="font-family: courier;">fso</span>.
+        </p>
+        <p style="text-align: center;"> The FSO ontology is available at 
+          <a href="http://www.w3id.org/fso">http://www.w3id.org/fso</a>.
+        </p>
+      </section>
+      <section id="overview" class="informative">
+        <h2>Overview of classes and properties</h2>
+
+      </section>
+      <section id="systems">
+        <h2>Systems</h2>
+
+        <section id="systems-overview" class="informative">
+          <h2>Overview and examples</h2>
+
+          <p>Systems are logical collections of components, which may have attributes such as design specifications assigned to them. Systems may be divided into subsystems, and subsystems may be counted as a part of multiple supersystems. Examples of overlapping systems and system relationships inferrable from component relationships are illustrated in <a href="#systems-overlap"></a>.</p>
+
+          <figure id="systems-overlap">
+            <img src="overlapping_systems.svg" />
+            <figcaption>An illustration of overlapping systems and inference on system boundary crossing relationships.</figcaption>
+          </figure>
+
+          <p>The following examples illustrate the use of systems:</p>
+          <ul>
+            <li>TODO example</li>
+          </ul>
+        </section>
+
+        <section id="systems-specification">
+          <h2>Specification</h2>
+
+          <section id="System">
+            <h2>fso:System</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#System</code></p>
+            <p>A system is a logical collection of components that may have properties that are valid for the components as a collection. </p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Example</th>
+                  <td>In buildings, common examples include heating systems and ventilation systems.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="DistributionSystem">
+            <h2>fso:DistributionSystem ⊑ fso:System</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#DistributionSystem</code></p>
+            <p>A system that distributes energy and/or mass</p>
+
+            <table>
+              <tbody>
+                <tr>
+                  <th>Sub class of</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="SupplySystem">
+            <h2>fso:SupplySystem  ⊑ fso:DistributionSystem</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#SupplySystem</code></p>
+            <p>A supply system is a system that <em>supplies</em> something from a source to consumers, as opposed to returning it. For example, fluid systems such as heating systems have a logical division between supply and return systems.</p>
+
+            <table>
+              <tbody>
+                <tr>
+                  <th>Sub class of</th>
+                  <td><a href="#DistributionSystem">fso:DistributionSystem</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="ReturnSystem">
+            <h2>fso:ReturnSystem  ⊑ fso:DistributionSystem</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#ReturnSystem</code></p>
+            <p>A return system is a system that <em>returns</em> something from consumers, as opposed to supplying it. For example, fluid systems such as heating systems have a logical division between supply and return systems.</p>
+
+            <table>
+              <tbody>
+                <tr>
+                  <th>Sub class of</th>
+                  <td><a href="#DistributionSystem">fso:DistributionSystem</a></td>
+                </tr>
+              </tbody>
+            </table> 
+          </section>
+
+          <section id="hasSubSystem">
+            <h2>fso:hasSubSystem</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasSubSystem</code></p>
+            <p>Relation between a supersystem and its subsystem.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Domain</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+                <tr>
+                  <th>Range</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#isSubSystemOf">fso:isSubSystemOf</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="hasSource">
+            <h2>fso:hasSource ⊑ fso:hasSubSystem</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasSource</code></p>
+            <p>Relation between a supersystem and a source system.</p>
+            <p>A source system is the source of a thing (energy, mass) from some perspective. Typically, a system is not only a source by itself, but rather this is dependent on the perspective. A system can, for example, consume electricity to produce heat, being a consumer on the electrical network but a source in the heating network.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Example</th>
+                  <td>A heat exchanger can be seen as a source system from downstream. On the other hand, an air handling unit is a source system for the ventilation system, but can be a consumer system for heating and cooling systems.</td>
+                </tr>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#subSystemOf">fso:subSystemOf</a></td>
+                </tr>
+                <tr>
+                  <th>Domain</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+                <tr>
+                  <th>Range</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+              </tbody>
+
+            </table>
+          </section>
+
+          <section id="hasConsumer">
+            <h2>fso:hasConsumer ⊑ fso:hasSubSystem</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasConsumer</code></p>
+            <p>Relation between a supersystem and a consumer system.</p>
+            <p>A consumer system <em>consumes</em> something supplied to it. For example, a ventilation zone can be seen as a consumer system in that it is supplied fresh air which it consumes.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#subSystemOf">fso:subSystemOf</a></td>
+                </tr>
+                <tr>
+                  <th>Domain</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+                <tr>
+                  <th>Range</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="hasSupplySystem">
+            <h2>fso:hasSupplySystem ⊑ fso:hasSubSystem</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasSupplySystem</code></p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#hasSubSystem">fso:hasSubSystem</a></td>
+                </tr>
+                <tr>
+                  <th>Domain</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+                <tr>
+                  <th>Range</th>
+                  <td><a href="#SupplySystem">fso:SupplySystem</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="hasReturnSystem">
+            <h2>fso:hasReturnSystem  ⊑ fso:hasSubSystem</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasReturnSystem</code></p>
+
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#hasSubSystem">fso:hasSubSystem</a></td>
+                </tr>
+                <tr>
+                  <th>Domain</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+                <tr>
+                  <th>Range</th>
+                  <td><a href="#ReturnSystem">fso:ReturnSystem</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section id="hasReturnSystem">
+
+          <section id="isSubSystemOf">
+            <h2>fso:isSubSystemOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isSubSystemOf</code></p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#hasSubSystem">fso:hasSubSystem</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </section>
+
+          <section>
+            <h2>fso:hasComponent</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasComponent</code></p>
+          </section>
+
+        </section>
+      </section>
+      <section id="components">
+        <h2>Components</h2>
+
+        <section id="components-overview" class="informative">
+          <h2>Overview and examples</h2>
+
+          <p>The component hierarchy is largely inspired by that of IFC.</p>
+        </section>
+
+        <section id="components-specification">
+          <h2>Specification</h2>
+
+          <section>
+            <h2>fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#Component</code></p>
+          </section>
+
+          <section>
+            <h2>fso:EnergyConversionDevice ⊑ fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#EnergyConversionDevice</code></p>
+            <p>A device that is used to convert energy from one form to another, or move it from one system to another. Potential examples include motors and heat exhangers.</p>
+          </section>
+
+          <section>
+            <h2>fso:Fitting ⊑ fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#Fitting</code></p>
+            <p>A component used to connect segments to each other, or to other components. For example, a junction in a pipe system.</p>
+          </section>
+
+          <section>
+            <h2>fso:FlowController ⊑ fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#FlowController</code></p>
+            <p>A device that has the potential to control the flow in a network. For example, valves and dampers.</p>
+          </section>
+
+          <section>
+            <h2>fso:FlowMovingDevice ⊑ fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#FlowMovingDevice</code></p>
+            <p>A device used to induce movement in a network. For example, pumps and fans.</p>
+          </section>
+
+          <section>
+            <h2>fso:MonitoringDevice ⊑ fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#MonitoringDevice</code></p>
+            <p>A device used to monitor some property or properties of the distributed thing. For example, a fluid flow meter.</p>
+          </section>
+
+          <section>
+            <h2>fso:Segment ⊑ fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#Segment</code></p>
+            <p>A component used to enable the passage of material or energy. For example, pipes and ducts.</p>
+          </section>
+
+          <section>
+            <h2>fso:StorageDevice ⊑ fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#StorageDevice</code></p>
+            <p>A device used to store mass or energy. For example, a water tank or a battery.</p>
+          </section>
+
+          <section>
+            <h2>fso:Terminal ⊑ fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#Terminal</code></p>
+            <p>A component used to allow material flow out of a distribution system. For example, faucets and air vents.</p>
+          </section>
+
+          <section>
+            <h2>fso:TreatmentDevice ⊑ fso:Component</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#TreatmentDevice</code></p>
+            <p>A device used to change the properties of material flowing through it. For example, filters.</p>
+          </section>
+
+          <section>
+            <h2>fso:isComponentOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isComponentOf</code></p>
+          </section>
+        </section>
+      </section>
+
+      <section id="connections">
+        <h2>Connections</h2>
+
+        Connections can exist between components and between systems.
+
+        <section class="informative">
+          <h2>Overview and examples</h2>
+        </section>
+
+        <section>
+          <h2>Specification</h2>
+
+          <section>
+            <h2>fso:connectedWith</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#connectedWith</code></p>
+          </section>
+
+          <section>
+            <h2>fso:exchangesElectricityWith ⊑ fso:connectedWith</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#exchangesElectricityWith</code></p>
+          </section>
+
+          <section>
+            <h2>fso:exchangesFluidWith ⊑ fso:connectedWith</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#exchangesFluidWith</code></p>
+          </section>
+
+          <section>
+            <h2>fso:feedsFluidTo ⊑ fso:exchangesFluidWith</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#feedsFluidTo</code></p>
+          </section>
+
+          <section>
+            <h2>fso:suppliesFluidTo ⊑ fso:feedsFluidTo</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#suppliesFluidTo</code></p>
+          </section>
+
+          <section>
+            <h2>fso:returnsFluidTo ⊑ fso:feedsFluidTo</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#returnsFluidTo</code></p>
+          </section>
+
+          <section>
+            <h2>fso:hasFluidFedBy ⊑ fso:exchangesFluidWith</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasFluidFedBy</code></p>
+          </section>
+
+          <section>
+            <h2>fso:hasFluidSuppliedBy ⊑ fso:hasFluidFedBy</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasFluidSuppliedBy</code></p>
+          </section>
+
+          <section>
+            <h2>fso:hasFluidReturnedBy ⊑ fso:hasFluidFedBy</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasFluidReturnedBy</code></p>
+          </section>
+
+          <section>
+            <h2>fso:exchangesHeatWith ⊑ fso:connectedWith</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#exchangesHeatWith</code></p>
+          </section>
+
+        </section>
+      </section>
+    </section>
+    <section class="appendix">
+      <h2>Examples</h2>
+    </section>
+  </body>
+</html>
