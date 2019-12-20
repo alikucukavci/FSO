@@ -18,7 +18,6 @@
 
 <https://w3id.org/fso#> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/fso/0.0.1> ;
-                         dcterms:contributor "All contributing members of the W3C Linked Building Data Community Group" ;
                          dcterms:creator "Ali Kücükavci" ,
                                          "Mads Holten Rasmussen" ,
                                          "Ville Kukkonen" ;
@@ -149,11 +148,13 @@ fso:exchangesHeatWith rdf:type owl:ObjectProperty ;
                                  "udveksler varme med"@da .
 
 
-###  https://w3id.org/fso#feeds
-fso:feeds rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf fso:exchangesFluidWith ;
-          owl:inverseOf fso:isFedBy ;
-          rdfs:label "føder"@da .
+###  https://w3id.org/fso#feedsFluidTo
+fso:feedsFluidTo rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf fso:exchangesFluidWith ;
+                 owl:inverseOf fso:hasFluidFedBy ;
+                 rdfs:comment "Relation from a thing feeding fluid to the thing it is feeding fluid to."@en ;
+                 rdfs:label "feeds fluid to"@en ,
+                            "føder"@da .
 
 
 ###  https://w3id.org/fso#hasComponent
@@ -172,6 +173,40 @@ fso:hasComponent rdf:type owl:ObjectProperty ;
                             "has component"@en .
 
 
+###  https://w3id.org/fso#hasConsumerSystem
+fso:hasConsumerSystem rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf fso:hasSubSystem ;
+                      rdfs:domain fso:System ;
+                      rdfs:range fso:System ;
+                      rdfs:comment """Relation between a supersystem and a consumer system.
+
+A consumer system consumes something supplied to it. For example, a ventilation zone can be seen as a consumer system in that it is supplied fresh air which it consumes."""@en ;
+                      rdfs:label "has consumer system"@en .
+
+
+###  https://w3id.org/fso#hasFluidFedBy
+fso:hasFluidFedBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf fso:exchangesFluidWith ;
+                  rdfs:comment "Relation from a thing that is fed fluid to the thing feeding the fluid."@en ;
+                  rdfs:label "has fluid fed by"@en .
+
+
+###  https://w3id.org/fso#hasFluidReturnedBy
+fso:hasFluidReturnedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf fso:hasFluidFedBy ;
+                       owl:inverseOf fso:returnsFluidTo ;
+                       rdfs:comment "Relation between a thing that has fluid returned to it and the thing returning the fluid."@en ;
+                       rdfs:label "has fluid returned by"@en .
+
+
+###  https://w3id.org/fso#hasFluidSuppliedBy
+fso:hasFluidSuppliedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf fso:hasFluidFedBy ;
+                       owl:inverseOf fso:suppliesFluidTo ;
+                       rdfs:comment "Relation between a thing that has fluid supplied to it and the thing supplying the fluid."@en ;
+                       rdfs:label "has fluid supplied by"@en .
+
+
 ###  https://w3id.org/fso#hasReturnSystem
 fso:hasReturnSystem rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf fso:hasSubSystem ;
@@ -181,6 +216,17 @@ fso:hasReturnSystem rdf:type owl:ObjectProperty ;
                     rdfs:comment "Relation between a system and its return system"@en ;
                     rdfs:label "har retursystem"@da ,
                                "has return system"@en .
+
+
+###  https://w3id.org/fso#hasSourceSystem
+fso:hasSourceSystem rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf fso:hasSubSystem ;
+                    rdfs:domain fso:System ;
+                    rdfs:range fso:System ;
+                    rdfs:comment """Relation between a supersystem and a source system.
+
+A source system is the source of a thing (energy, mass) from some perspective. Typically, a system is not only a source by itself, but rather this is dependent on the perspective. A system can, for example, consume electricity to produce heat, being a consumer on the electrical network but a source in the heating network."""@en ;
+                    rdfs:label "has source system"@en .
 
 
 ###  https://w3id.org/fso#hasSubSystem
@@ -217,53 +263,36 @@ fso:isComponentOf rdf:type owl:ObjectProperty ;
                                          ) .
 
 
-###  https://w3id.org/fso#isFedBy
-fso:isFedBy rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf fso:exchangesFluidWith .
-
-
-###  https://w3id.org/fso#isReturnedFluidToBy
-fso:isReturnedFluidToBy rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf fso:isFedBy ;
-                        owl:inverseOf fso:returnsFluidTo .
-
-
 ###  https://w3id.org/fso#isSubSystemOf
 fso:isSubSystemOf rdf:type owl:ObjectProperty ;
                   rdfs:domain fso:System ;
                   rdfs:range fso:System .
 
 
-###  https://w3id.org/fso#isSuppliedFluidToBy
-fso:isSuppliedFluidToBy rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf fso:isFedBy ;
-                        owl:inverseOf fso:suppliesFluidTo .
-
-
 ###  https://w3id.org/fso#returnsFluidTo
 fso:returnsFluidTo rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf fso:feeds ;
+                   rdfs:subPropertyOf fso:feedsFluidTo ;
                    owl:propertyChainAxiom ( fso:hasComponent
                                             fso:returnsFluidTo
                                           ) ,
                                           ( fso:returnsFluidTo
                                             fso:isComponentOf
                                           ) ;
-                   rdfs:comment "Relation of a component that supplies fluid to another component"@en ;
+                   rdfs:comment "Relation implying logical return flow from a thing to another."@en ;
                    rdfs:label "returnerer fluid til"@da ,
                               "returns fluid to"@en .
 
 
 ###  https://w3id.org/fso#suppliesFluidTo
 fso:suppliesFluidTo rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf fso:feeds ;
+                    rdfs:subPropertyOf fso:feedsFluidTo ;
                     owl:propertyChainAxiom ( fso:hasComponent
                                              fso:suppliesFluidTo
                                            ) ,
                                            ( fso:suppliesFluidTo
                                              fso:isComponentOf
                                            ) ;
-                    rdfs:comment "Relation of a component that returns fluid to another component"@en ;
+                    rdfs:comment "Relation implying logical supply flow from a thing to another."@en ;
                     rdfs:label "forsyner fluid til"@da ,
                                "supplies fluid to"@en .
 
@@ -296,11 +325,6 @@ fso:Component rdf:type owl:Class ;
               rdfs:comment "A component contained by a fso:System"@en ;
               rdfs:label "Component"@en ,
                          "Komponent"@da .
-
-
-###  https://w3id.org/fso#ConsumptionSystem
-fso:ConsumptionSystem rdf:type owl:Class ;
-                      rdfs:subClassOf fso:System .
 
 
 ###  https://w3id.org/fso#DistributionSystem
@@ -349,11 +373,6 @@ fso:MonitoringDevice rdf:type owl:Class ;
                      rdfs:comment "A device used to monitor some property or properties of the distributed thing. For example, a fluid flow meter."@en ;
                      rdfs:label "Monitoring device"@en ,
                                 "Målene enhed"@da .
-
-
-###  https://w3id.org/fso#ProductionSystem
-fso:ProductionSystem rdf:type owl:Class ;
-                     rdfs:subClassOf fso:System .
 
 
 ###  https://w3id.org/fso#ReturnSystem
@@ -418,18 +437,6 @@ fso:TreatmentDevice rdf:type owl:Class ;
 ###  https://w3id.org/fso#
 <https://w3id.org/fso#> rdf:type owl:NamedIndividual ,
                                  voaf:Vocabulary .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( fso:ConsumptionSystem
-                fso:DistributionSystem
-                fso:ProductionSystem
-              )
-] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
