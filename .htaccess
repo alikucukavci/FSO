@@ -37,7 +37,7 @@ RewriteRule ^$ https://alikucukavci.github.io/FSO/ontology.nt [R=303,L]
 RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
 RewriteCond %{HTTP_ACCEPT} text/\* [OR]
 RewriteCond %{HTTP_ACCEPT} \*/turtle 
-RewriteRule ^$ https://alikucukavci.github.io/FSO/ontology.ttl [R=303,L]
+RewriteRule ^$ https://github.com/alikucukavci/FSO/blob/master/fso.ttl [R=303,L]
 
 RewriteCond %{HTTP_ACCEPT} .+
 RewriteRule ^$ 406.html [R=406,L]
