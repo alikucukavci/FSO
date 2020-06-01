@@ -1,0 +1,41 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .  
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix voaf:     <http://purl.org/vocommons/voaf#> .
+@prefix s4syst:   <https://saref.etsi.org/saref4syst#> .
+
+@prefix fso: <https://w3id.org/fso#> .
+@prefix : <https://w3id.org/fso/> .
+@base <https://w3id.org/fso/SAREF4SYSTAlignment#> .
+
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+
+:SAREF4SYSTAlignment a owl:Ontology, voaf:Vocabulary ;
+  dcterms:title "FSO SAREF4SYST Alignment"@en ;
+  dcterms:description "Proposed alignments between FSO and SAREF4SYST."@en ;
+  dcterms:issued "2020-05-05"^^xsd:date ;
+  dcterms:modified "2020-05-05"^^xsd:date ;
+  owl:versionInfo "v0.1.0" ;
+  owl:versionIRI <https://w3id.org/fso/SAREF4BLDGAlignment/0.1.0> ;
+  dcterms:creator <https://orcid.org/0000-0002-4482-5309> ;
+  owl:imports <https://w3id.org/fso> ;
+  owl:imports <https://saref.etsi.org/saref4bldg> .
+
+fso:System rdfs:subClassOf s4syst:System .
+fso:Component rdfs:subClassOf s4syst:System .
+
+fso:connectedWith rdfs:subPropertyOf s4syst:connectedTo .
+
+fso:hasSubSystem rdfs:subPropertyOf s4syst:hasSubSystem .
+fso:isSubSystemOf rdfs:subPropertyOf s4syst:subSystemOf .
+
+fso:hasComponent rdfs:subPropertyOf s4syst:hasSubSystem .
+fso:isComponentOf rdfs:subPropertyOf s4syst:subSystemOf .
