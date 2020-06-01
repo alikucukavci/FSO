@@ -79,8 +79,45 @@
       </section>
       <section id="overview" class="informative">
         <h2>Overview of classes and properties</h2>
-
+        <p>Classes:
+          <a href="#Component">fso:Component</a>, 
+          <a href="#DistributionSystem">fso:DistributionSystem</a>, 
+          <a href="#EnergyConversionDevice">fso:EnergyConversionDevice</a>, 
+          <a href="#Fitting">fso:Fitting</a>, 
+          <a href="#FlowController">fso:FlowController</a>, 
+          <a href="#FlowMovingDevice">fso:FlowMovingDevice</a>, 
+          <a href="#MonitoringDevice">fso:MonitoringDevice</a>, 
+          <a href="#Segment">fso:Segment</a>, 
+          <a href="#StorageDevice">fso:StorageDevice</a>, 
+          <a href="#Terminal">fso:Terminal</a>, 
+          <a href="#TreatmentDevice">fso:TreatmentDevice</a>, 
+          <a href="#SupplySystem">fso:SupplySystem</a>, 
+          <a href="#System">fso:System</a>, 
+          <a href="#ReturnSystem">fso:ReturnSystem</a>
+        </p>
+        <p>Object properties:
+          <a href="#connectedWith">fso:connectedWith</a>, 
+          <a href="#exchangesElectricChargeWith">fso:exchangesElectricChargeWith</a>, 
+          <a href="#exchangesFluidWith">fso:exchangesFluidWith</a>, 
+          <a href="#exchangesHeatWith">fso:exchangesHeatWith</a>, 
+          <a href="#feedsFluidTo">fso:feedsFluidTo</a>, 
+          <a href="#hasComponent">fso:hasComponent</a>, 
+          <a href="#hasConsumerSystem">fso:hasConsumerSystem</a>, 
+          <a href="#hasFluidFedBy">fso:hasFluidFedBy</a>, 
+          <a href="#hasFluidReturnedBy">fso:hasFluidReturnedBy</a>, 
+          <a href="#hasFluidSuppliedBy">fso:hasFluidSuppliedBy</a>, 
+          <a href="#hasReturnSystem">fso:hasReturnSystem</a>, 
+          <a href="#hasSourceSystem">fso:hasSourceSystem</a>, 
+          <a href="#hasSubSystem">fso:hasSubSystem</a>, 
+          <a href="#hasSupplySystem">fso:hasSupplySystem</a>, 
+          <a href="#isComponentOf">fso:isComponentOf</a>, 
+          <a href="#isSubSystemOf">fso:isSubSystemOf</a>, 
+          <a href="#returnsFluidTo">fso:returnsFluidTo</a>, 
+          <a href="#suppliesFluidTo">fso:suppliesFluidTo</a>, 
+          <a href="#transfersHeatTo">fso:transfersHeatTo</a>
+        </p>
       </section>
+
       <section id="systems">
         <h2>Systems</h2>
 
@@ -213,7 +250,7 @@
                 </tr>
                 <tr>
                   <th>Subproperty of</th>
-                  <td><a href="#subSystemOf">fso:subSystemOf</a></td>
+                  <td><a href="#isSubSystemOf">fso:isSubSystemOf</a></td>
                 </tr>
                 <tr>
                   <th>Domain</th>
@@ -237,7 +274,7 @@
               <tbody>
                 <tr>
                   <th>Subproperty of</th>
-                  <td><a href="#subSystemOf">fso:subSystemOf</a></td>
+                  <td><a href="#isSubSystemOf">fso:isSubSystemOf</a></td>
                 </tr>
                 <tr>
                   <th>Domain</th>
@@ -370,7 +407,7 @@
             </table>
           </section>
 
-          <section>
+          <section id="FlowMovingDevice">
             <h2>fso:FlowMovingDevice ⊑ fso:Component</h2>
             <p><strong>IRI</strong> <code>https://w3id.org/fso#FlowMovingDevice</code></p>
             <p>A device used to induce movement in a network. For example, pumps and fans.</p>
@@ -495,8 +532,8 @@
             <p>A generic "connection" relation between things.</p>
           </section>
 
-          <section id="exchangesElectricityWith">
-            <h2>fso:exchangesElectricityWith ⊑ fso:connectedWith</h2>
+          <section id="exchangesElectricChargeWith">
+            <h2>fso:exchangesElectricChargeWith ⊑ fso:connectedWith</h2>
             <p><strong>IRI</strong> <code>https://w3id.org/fso#exchangesElectricityWith</code></p>
             <p>Relation between things that exchange electric charge, i.e. have electrical current between them.</p>
             <table>
