@@ -24,12 +24,12 @@
                          dcterms:description "The Flow Systems Ontology (FSO) is an ontology for describing interconnected systems with material or energy flow connections, and their components."@en ;
                          dcterms:issued "2020-01-01T12:00:00"^^xsd:dateTime ;
                          dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
-                         dcterms:modified "2020-05-05T12:00:00"^^xsd:dateTime ;
+                         dcterms:modified "2020-08-06T12:00:00"^^xsd:dateTime ;
                          dcterms:title "The Flow Systems Ontology (FSO)"@en ;
                          vann:preferredNamespacePrefix "fso" ;
                          vann:preferredNamespaceUri <https://w3id.org/fso#> ;
                          owl:priorVersion <https://w3id.org/fso/0.0.1> ;
-                         owl:versionInfo "0.1.0" .
+                         owl:versionInfo "0.1.0"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -173,15 +173,12 @@ fso:hasComponent rdf:type owl:ObjectProperty ;
                             "has component"@en .
 
 
-###  https://w3id.org/fso#hasConsumerSystem
-fso:hasConsumerSystem rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf fso:hasSubSystem ;
-                      rdfs:domain fso:System ;
-                      rdfs:range fso:System ;
-                      rdfs:comment """Relation between a supersystem and a consumer system.
-
-A consumer system consumes something supplied to it. For example, a ventilation zone can be seen as a consumer system in that it is supplied fresh air which it consumes."""@en ;
-                      rdfs:label "has consumer system"@en .
+###  https://w3id.org/fso#hasConsumerComponent
+fso:hasConsumerComponent rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf fso:hasComponent ;
+                         owl:inverseOf fso:isConsumerComponentOf ;
+                         rdfs:comment "Relation between a fso:System and a fso:Component acting as a consumer of energy or matter from the system. For example, a faucet is a consumer for a water system and an air terminal is a consumer for a ventilation system."@en ;
+                         rdfs:label "has consumer component"@en .
 
 
 ###  https://w3id.org/fso#hasFluidFedBy
@@ -207,15 +204,12 @@ fso:hasFluidSuppliedBy rdf:type owl:ObjectProperty ;
                        rdfs:label "has fluid supplied by"@en .
 
 
-###  https://w3id.org/fso#hasReturnSystem
-fso:hasReturnSystem rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf fso:hasSubSystem ;
-                    rdf:type owl:AsymmetricProperty ;
-                    rdfs:domain fso:System ;
-                    rdfs:range fso:ReturnSystem ;
-                    rdfs:comment "Relation between a system and its return system"@en ;
-                    rdfs:label "har retursystem"@da ,
-                               "has return system"@en .
+###  https://w3id.org/fso#hasSourceComponent
+fso:hasSourceComponent rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf fso:hasComponent ;
+                       owl:inverseOf fso:isSourceComponentOf ;
+                       rdfs:comment "Relation between a fso:System and a fso:Component acting as a source of energy or matter to the system. For example, a district heating heat exchanger may act as a source of heat for a building heating system, while the district heating system will see the same heat exchanger as a consumer. Similarly, an AHU may have a heating coil as a source of heat, while the heating system will consider that coil as a consumer."@en ;
+                       rdfs:label "has source component"@en .
 
 
 ###  https://w3id.org/fso#hasSourceSystem
@@ -261,6 +255,18 @@ fso:isComponentOf rdf:type owl:ObjectProperty ;
                   owl:propertyChainAxiom ( fso:isComponentOf
                                            fso:isSubSystemOf
                                          ) .
+
+
+###  https://w3id.org/fso#isConsumerComponentOf
+fso:isConsumerComponentOf rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf fso:isComponentOf ;
+                          rdfs:label "is consumer component of"@en .
+
+
+###  https://w3id.org/fso#isSourceComponentOf
+fso:isSourceComponentOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf fso:isComponentOf ;
+                        rdfs:label "is source component of"@en .
 
 
 ###  https://w3id.org/fso#isSubSystemOf
