@@ -222,17 +222,6 @@ fso:hasSourceComponent rdf:type owl:ObjectProperty ;
                        rdfs:label "has source component"@en .
 
 
-###  https://w3id.org/fso#hasSourceSystem
-fso:hasSourceSystem rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf fso:hasSubSystem ;
-                    rdfs:domain fso:System ;
-                    rdfs:range fso:System ;
-                    rdfs:comment """Relation between a supersystem and a source system.
-
-A source system is the source of a thing (energy, mass) from some perspective. Typically, a system is not only a source by itself, but rather this is dependent on the perspective. A system can, for example, consume electricity to produce heat, being a consumer on the electrical network but a source in the heating network."""@en ;
-                    rdfs:label "has source system"@en .
-
-
 ###  https://w3id.org/fso#hasSubSystem
 fso:hasSubSystem rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;

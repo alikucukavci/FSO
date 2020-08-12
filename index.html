@@ -104,13 +104,11 @@
           <a href="#feedsFluidTo">fso:feedsFluidTo</a>, 
           <a href="#hasComponent">fso:hasComponent</a>, 
           <a href="#hasConsumerComponent">fso:hasConsumerComponent</a>, 
-          <a href="#hasConsumerSystem">fso:hasConsumerSystem</a>, 
           <a href="#hasFluidFedBy">fso:hasFluidFedBy</a>, 
           <a href="#hasFluidReturnedBy">fso:hasFluidReturnedBy</a>, 
           <a href="#hasFluidSuppliedBy">fso:hasFluidSuppliedBy</a>, 
           <a href="#hasReturnSystem">fso:hasReturnSystem</a>, 
           <a href="#hasSourceComponent">fso:hasSourceComponent</a>, 
-          <a href="#hasSourceSystem">fso:hasSourceSystem</a>, 
           <a href="#hasSubSystem">fso:hasSubSystem</a>, 
           <a href="#hasSupplySystem">fso:hasSupplySystem</a>, 
           <a href="#isComponentOf">fso:isComponentOf</a>, 
@@ -237,57 +235,6 @@
                 <tr>
                   <th>Inverse of</th>
                   <td><a href="#hasSubSystem">fso:hasSubSystem</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section id="hasSourceSystem">
-            <h2>fso:hasSourceSystem ⊑ fso:hasSubSystem</h2>
-            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasSourceSystem</code></p>
-            <p>Relation between a supersystem and a source system.</p>
-            <p>A source system is the source of a thing (energy, mass) from some perspective. Typically, a system is not only a source by itself, but rather this is dependent on the perspective. A system can, for example, consume electricity to produce heat, being a consumer on the electrical network but a source in the heating network.</p>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Example</th>
-                  <td>A heat exchanger can be seen as a source system from downstream. On the other hand, an air handling unit is a source system for the ventilation system, but can be a consumer system for heating and cooling systems.</td>
-                </tr>
-                <tr>
-                  <th>Subproperty of</th>
-                  <td><a href="#isSubSystemOf">fso:isSubSystemOf</a></td>
-                </tr>
-                <tr>
-                  <th>Domain</th>
-                  <td><a href="#System">fso:System</a></td>
-                </tr>
-                <tr>
-                  <th>Range</th>
-                  <td><a href="#System">fso:System</a></td>
-                </tr>
-              </tbody>
-
-            </table>
-          </section>
-
-          <section id="hasConsumerSystem">
-            <h2>fso:hasConsumerSystem ⊑ fso:hasSubSystem</h2>
-            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasConsumerSystem</code></p>
-            <p>Relation between a supersystem and a consumer system.</p>
-            <p>A consumer system <em>consumes</em> something supplied to it. For example, a ventilation zone can be seen as a consumer system in that it is supplied fresh air which it consumes.</p>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Subproperty of</th>
-                  <td><a href="#isSubSystemOf">fso:isSubSystemOf</a></td>
-                </tr>
-                <tr>
-                  <th>Domain</th>
-                  <td><a href="#System">fso:System</a></td>
-                </tr>
-                <tr>
-                  <th>Range</th>
-                  <td><a href="#System">fso:System</a></td>
                 </tr>
               </tbody>
             </table>
