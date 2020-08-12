@@ -204,6 +204,16 @@ fso:hasFluidSuppliedBy rdf:type owl:ObjectProperty ;
                        rdfs:label "has fluid supplied by"@en .
 
 
+###  https://w3id.org/fso#hasReturnSystem
+fso:hasReturnSystem rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf fso:hasSubSystem ;
+                    rdf:type owl:AsymmetricProperty ;
+                    rdfs:domain fso:System ;
+                    rdfs:range fso:ReturnSystem ;
+                    rdfs:comment "Relation between a system and its return system."@en ;
+                    rdfs:label "has return system"@en .
+
+
 ###  https://w3id.org/fso#hasSourceComponent
 fso:hasSourceComponent rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf fso:hasComponent ;
