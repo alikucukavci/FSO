@@ -227,19 +227,6 @@
             </table>
           </section>
 
-          <section id="isSubSystemOf">
-            <h2>fso:isSubSystemOf</h2>
-            <p><strong>IRI</strong> <code>https://w3id.org/fso#isSubSystemOf</code></p>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Inverse of</th>
-                  <td><a href="#hasSubSystem">fso:hasSubSystem</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
           <section id="hasSupplySystem">
             <h2>fso:hasSupplySystem ⊑ fso:hasSubSystem</h2>
             <p><strong>IRI</strong> <code>https://w3id.org/fso#hasSupplySystem</code></p>
@@ -262,7 +249,7 @@
           </section>
 
           <section id="hasReturnSystem">
-            <h2>fso:hasReturnSystem  ⊑ fso:hasSubSystem</h2>
+            <h2>fso:hasReturnSystem ⊑ fso:hasSubSystem</h2>
             <p><strong>IRI</strong> <code>https://w3id.org/fso#hasReturnSystem</code></p>
 
             <table>
@@ -278,6 +265,19 @@
                 <tr>
                   <th>Range</th>
                   <td><a href="#ReturnSystem">fso:ReturnSystem</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="isSubSystemOf">
+            <h2>fso:isSubSystemOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isSubSystemOf</code></p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#hasSubSystem">fso:hasSubSystem</a></td>
                 </tr>
               </tbody>
             </table>
@@ -327,6 +327,28 @@
                 <tr>
                   <th>Inverse of</th>
                   <td><a href="#isSourceComponentOf">fso:isSourceComponentOf</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="isComponentOf">
+            <h2>fso:isComponentOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isComponentOf</code></p>
+            <p>Relation between a component and a system containing the component.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#hasComponent">fso:hasComponent</a></td>
+                </tr>
+                <tr>
+                  <th>Domain</th>
+                  <td><a href="#Component">fso:Component</a></td>
+                </tr>
+                <tr>
+                  <th>Range</th>
+                  <td><a href="#System">fso:System</a></td>
                 </tr>
               </tbody>
             </table>
@@ -496,28 +518,6 @@
                 <tr>
                   <th>Sub class of</th>
                   <td><a href="#Component">fso:Component</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section id="isComponentOf">
-            <h2>fso:isComponentOf</h2>
-            <p><strong>IRI</strong> <code>https://w3id.org/fso#isComponentOf</code></p>
-            <p>Relation between a component and a system containing the component.</p>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Inverse of</th>
-                  <td><a href="#hasComponent">fso:hasComponent</a></td>
-                </tr>
-                <tr>
-                  <th>Domain</th>
-                  <td><a href="#Component">fso:Component</a></td>
-                </tr>
-                <tr>
-                  <th>Range</th>
-                  <td><a href="#System">fso:System</a></td>
                 </tr>
               </tbody>
             </table>
