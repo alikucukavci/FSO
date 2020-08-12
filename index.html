@@ -103,15 +103,19 @@
           <a href="#exchangesHeatWith">fso:exchangesHeatWith</a>, 
           <a href="#feedsFluidTo">fso:feedsFluidTo</a>, 
           <a href="#hasComponent">fso:hasComponent</a>, 
+          <a href="#hasConsumerComponent">fso:hasConsumerComponent</a>, 
           <a href="#hasConsumerSystem">fso:hasConsumerSystem</a>, 
           <a href="#hasFluidFedBy">fso:hasFluidFedBy</a>, 
           <a href="#hasFluidReturnedBy">fso:hasFluidReturnedBy</a>, 
           <a href="#hasFluidSuppliedBy">fso:hasFluidSuppliedBy</a>, 
           <a href="#hasReturnSystem">fso:hasReturnSystem</a>, 
+          <a href="#hasSourceComponent">fso:hasSourceComponent</a>, 
           <a href="#hasSourceSystem">fso:hasSourceSystem</a>, 
           <a href="#hasSubSystem">fso:hasSubSystem</a>, 
           <a href="#hasSupplySystem">fso:hasSupplySystem</a>, 
           <a href="#isComponentOf">fso:isComponentOf</a>, 
+          <a href="#isConsumerComponentOf">fso:isConsumerComponentOf</a>, 
+          <a href="#isSourceComponentOf">fso:isSourceComponentOf</a>, 
           <a href="#isSubSystemOf">fso:isSubSystemOf</a>, 
           <a href="#returnsFluidTo">fso:returnsFluidTo</a>, 
           <a href="#suppliesFluidTo">fso:suppliesFluidTo</a>, 
@@ -340,6 +344,78 @@
                 <tr>
                   <th>Inverse of</th>
                   <td><a href="#isComponentOf">fso:isComponentOf</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="hasConsumerComponent">
+            <h2>fso:hasConsumerComponent ⊑ fso:hasComponent</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasConsumerComponent</code></p>
+            <p>Relation between a fso:System and a fso:Component acting as a consumer of energy or matter from the system. For example, a faucet is a consumer for a water system and an air terminal is a consumer for a ventilation system.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#hasComponent">fso:hasComponent</a></td>
+                </tr>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#isConsumerComponentOf">fso:isConsumerComponentOf</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="hasSourceComponent">
+            <h2>fso:hasSourceComponent ⊑ fso:hasComponent</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasSourceComponent</code></p>
+            <p>Relation between a fso:System and a fso:Component acting as a source of energy or matter to the system. For example, a district heating heat exchanger may act as a source of heat for a building heating system, while the district heating system will see the same heat exchanger as a consumer. Similarly, an AHU may have a heating coil as a source of heat, while the heating system will consider that coil as a consumer.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#hasComponent">fso:hasComponent</a></td>
+                </tr>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#isSourceComponentOf">fso:isSourceComponentOf</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="isConsumerComponentOf">
+            <h2>fso:isConsumerComponentOf ⊑ fso:isComponentOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isConsumerComponentOf</code></p>
+            <p>Inverse of <a href="#hasConsumerComponent">fso:hasConsumerComponent</a>, denoting a component as a consumer of energy or matter from a system.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#isComponentOf">fso:isComponentOf</a></td>
+                </tr>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#hasConsumerComponent">fso:hasConsumerComponent</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="isSourceComponentOf">
+            <h2>fso:isSourceComponentOf ⊑ fso:isComponentOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isSourceComponentOf</code></p>
+            <p>Inverse of <a href="#hasSourceComponent">fso:hasSourceComponent</a>, denoting a component as a source of energy or matter into a system.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#isComponentOf">fso:isComponentOf</a></td>
+                </tr>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#hasSourceComponent">fso:hasSourceComponent</a></td>
                 </tr>
               </tbody>
             </table>
