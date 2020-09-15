@@ -294,8 +294,6 @@ fso:suppliesFluidTo rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf fso:feedsFluidTo ;
                     owl:propertyChainAxiom ( fso:hasComponent
                                              fso:suppliesFluidTo
-                                           ) ,
-                                           ( fso:suppliesFluidTo
                                              fso:isComponentOf
                                            ) ;
                     rdfs:comment "Relation implying logical supply flow from a thing to another."@en ;
