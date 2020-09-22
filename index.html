@@ -103,15 +103,17 @@
           <a href="#exchangesHeatWith">fso:exchangesHeatWith</a>, 
           <a href="#feedsFluidTo">fso:feedsFluidTo</a>, 
           <a href="#hasComponent">fso:hasComponent</a>, 
-          <a href="#hasConsumerSystem">fso:hasConsumerSystem</a>, 
+          <a href="#hasConsumerComponent">fso:hasConsumerComponent</a>, 
           <a href="#hasFluidFedBy">fso:hasFluidFedBy</a>, 
           <a href="#hasFluidReturnedBy">fso:hasFluidReturnedBy</a>, 
           <a href="#hasFluidSuppliedBy">fso:hasFluidSuppliedBy</a>, 
           <a href="#hasReturnSystem">fso:hasReturnSystem</a>, 
-          <a href="#hasSourceSystem">fso:hasSourceSystem</a>, 
+          <a href="#hasSourceComponent">fso:hasSourceComponent</a>, 
           <a href="#hasSubSystem">fso:hasSubSystem</a>, 
           <a href="#hasSupplySystem">fso:hasSupplySystem</a>, 
           <a href="#isComponentOf">fso:isComponentOf</a>, 
+          <a href="#isConsumerComponentOf">fso:isConsumerComponentOf</a>, 
+          <a href="#isSourceComponentOf">fso:isSourceComponentOf</a>, 
           <a href="#isSubSystemOf">fso:isSubSystemOf</a>, 
           <a href="#returnsFluidTo">fso:returnsFluidTo</a>, 
           <a href="#suppliesFluidTo">fso:suppliesFluidTo</a>, 
@@ -129,7 +131,7 @@
 
           <figure id="systems-overlap">
 
-            <img src="overlapping_systems.svg" />
+            <img src="img/overlapping_systems.svg" />
             <figcaption>An illustration of overlapping systems and inference on system boundary crossing relationships.</figcaption>
           </figure>
 
@@ -225,70 +227,6 @@
             </table>
           </section>
 
-          <section id="isSubSystemOf">
-            <h2>fso:isSubSystemOf</h2>
-            <p><strong>IRI</strong> <code>https://w3id.org/fso#isSubSystemOf</code></p>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Inverse of</th>
-                  <td><a href="#hasSubSystem">fso:hasSubSystem</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section id="hasSourceSystem">
-            <h2>fso:hasSourceSystem ⊑ fso:hasSubSystem</h2>
-            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasSourceSystem</code></p>
-            <p>Relation between a supersystem and a source system.</p>
-            <p>A source system is the source of a thing (energy, mass) from some perspective. Typically, a system is not only a source by itself, but rather this is dependent on the perspective. A system can, for example, consume electricity to produce heat, being a consumer on the electrical network but a source in the heating network.</p>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Example</th>
-                  <td>A heat exchanger can be seen as a source system from downstream. On the other hand, an air handling unit is a source system for the ventilation system, but can be a consumer system for heating and cooling systems.</td>
-                </tr>
-                <tr>
-                  <th>Subproperty of</th>
-                  <td><a href="#isSubSystemOf">fso:isSubSystemOf</a></td>
-                </tr>
-                <tr>
-                  <th>Domain</th>
-                  <td><a href="#System">fso:System</a></td>
-                </tr>
-                <tr>
-                  <th>Range</th>
-                  <td><a href="#System">fso:System</a></td>
-                </tr>
-              </tbody>
-
-            </table>
-          </section>
-
-          <section id="hasConsumerSystem">
-            <h2>fso:hasConsumerSystem ⊑ fso:hasSubSystem</h2>
-            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasConsumerSystem</code></p>
-            <p>Relation between a supersystem and a consumer system.</p>
-            <p>A consumer system <em>consumes</em> something supplied to it. For example, a ventilation zone can be seen as a consumer system in that it is supplied fresh air which it consumes.</p>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Subproperty of</th>
-                  <td><a href="#isSubSystemOf">fso:isSubSystemOf</a></td>
-                </tr>
-                <tr>
-                  <th>Domain</th>
-                  <td><a href="#System">fso:System</a></td>
-                </tr>
-                <tr>
-                  <th>Range</th>
-                  <td><a href="#System">fso:System</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
           <section id="hasSupplySystem">
             <h2>fso:hasSupplySystem ⊑ fso:hasSubSystem</h2>
             <p><strong>IRI</strong> <code>https://w3id.org/fso#hasSupplySystem</code></p>
@@ -311,7 +249,7 @@
           </section>
 
           <section id="hasReturnSystem">
-            <h2>fso:hasReturnSystem  ⊑ fso:hasSubSystem</h2>
+            <h2>fso:hasReturnSystem ⊑ fso:hasSubSystem</h2>
             <p><strong>IRI</strong> <code>https://w3id.org/fso#hasReturnSystem</code></p>
 
             <table>
@@ -332,6 +270,19 @@
             </table>
           </section>
 
+          <section id="isSubSystemOf">
+            <h2>fso:isSubSystemOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isSubSystemOf</code></p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#hasSubSystem">fso:hasSubSystem</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
           <section id="hasComponent">
             <h2>fso:hasComponent</h2>
             <p><strong>IRI</strong> <code>https://w3id.org/fso#hasComponent</code></p>
@@ -340,6 +291,100 @@
                 <tr>
                   <th>Inverse of</th>
                   <td><a href="#isComponentOf">fso:isComponentOf</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="hasConsumerComponent">
+            <h2>fso:hasConsumerComponent ⊑ fso:hasComponent</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasConsumerComponent</code></p>
+            <p>Relation between a fso:System and a fso:Component acting as a consumer of energy or matter from the system. For example, a faucet is a consumer for a water system and an air terminal is a consumer for a ventilation system.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#hasComponent">fso:hasComponent</a></td>
+                </tr>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#isConsumerComponentOf">fso:isConsumerComponentOf</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="hasSourceComponent">
+            <h2>fso:hasSourceComponent ⊑ fso:hasComponent</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#hasSourceComponent</code></p>
+            <p>Relation between a fso:System and a fso:Component acting as a source of energy or matter to the system. For example, a district heating heat exchanger may act as a source of heat for a building heating system, while the district heating system will see the same heat exchanger as a consumer. Similarly, an AHU may have a heating coil as a source of heat, while the heating system will consider that coil as a consumer.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#hasComponent">fso:hasComponent</a></td>
+                </tr>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#isSourceComponentOf">fso:isSourceComponentOf</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="isComponentOf">
+            <h2>fso:isComponentOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isComponentOf</code></p>
+            <p>Relation between a component and a system containing the component.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#hasComponent">fso:hasComponent</a></td>
+                </tr>
+                <tr>
+                  <th>Domain</th>
+                  <td><a href="#Component">fso:Component</a></td>
+                </tr>
+                <tr>
+                  <th>Range</th>
+                  <td><a href="#System">fso:System</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="isConsumerComponentOf">
+            <h2>fso:isConsumerComponentOf ⊑ fso:isComponentOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isConsumerComponentOf</code></p>
+            <p>Inverse of <a href="#hasConsumerComponent">fso:hasConsumerComponent</a>, denoting a component as a consumer of energy or matter from a system.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#isComponentOf">fso:isComponentOf</a></td>
+                </tr>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#hasConsumerComponent">fso:hasConsumerComponent</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="isSourceComponentOf">
+            <h2>fso:isSourceComponentOf ⊑ fso:isComponentOf</h2>
+            <p><strong>IRI</strong> <code>https://w3id.org/fso#isSourceComponentOf</code></p>
+            <p>Inverse of <a href="#hasSourceComponent">fso:hasSourceComponent</a>, denoting a component as a source of energy or matter into a system.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subproperty of</th>
+                  <td><a href="#isComponentOf">fso:isComponentOf</a></td>
+                </tr>
+                <tr>
+                  <th>Inverse of</th>
+                  <td><a href="#hasSourceComponent">fso:hasSourceComponent</a></td>
                 </tr>
               </tbody>
             </table>
@@ -473,28 +518,6 @@
                 <tr>
                   <th>Sub class of</th>
                   <td><a href="#Component">fso:Component</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section id="isComponentOf">
-            <h2>fso:isComponentOf</h2>
-            <p><strong>IRI</strong> <code>https://w3id.org/fso#isComponentOf</code></p>
-            <p>Relation between a component and a system containing the component.</p>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Inverse of</th>
-                  <td><a href="#hasComponent">fso:hasComponent</a></td>
-                </tr>
-                <tr>
-                  <th>Domain</th>
-                  <td><a href="#Component">fso:Component</a></td>
-                </tr>
-                <tr>
-                  <th>Range</th>
-                  <td><a href="#System">fso:System</a></td>
                 </tr>
               </tbody>
             </table>
